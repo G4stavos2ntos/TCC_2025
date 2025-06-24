@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RECICLAGEM</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="estilo.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   </head>
   <body>
 
@@ -14,13 +17,20 @@
                    
                     </li>             
                        <a href="DOAÇAO.html">DOAÇOES</a>
+
+
+
+
                     
+                       
+                       <button id="acessibilidadeToggle">Modo Acessível</button>
+
    
 <h3>O QUE É RECICLAGEM</h3>
 
 <p>A reciclagem é o processo de reaproveitamento de materiais descartados. O seu objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas. É considerada uma das alternativas mais eficientes para tratar os resíduos sólidos, tanto do ponto de vista ambiental quanto social, e está diretamente inserida no contexto da economia circular.</p>
 
-<h3>O QUE SÃO REÍSDUOS RECÍCLAVEIS</h3>
+<h3>O QUE SÃO RESIDUOS RECÍCLAVEIS</h3>
 
 <p>Define-se resíduo como todo material que sobra de determinado produto após sua utilização. Pode ser dividido entre resíduos sólidos e resíduos úmidos e/ou orgânicos. Ambos possuem grande potencial para serem reutilizados ou reciclados.</p>
 
@@ -107,6 +117,10 @@
 
 
 
+
+
+
+
    <h3>PONTOS DE RECICLAGEM EM OSASCO</h3>
 
 <div class="mapaGoogle"></div>
@@ -115,6 +129,31 @@
       width="600"
       height="450"
     ></iframe>
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const botao = document.getElementById("acessibilidadeToggle");
+    
+        // Ativa o tema salvo
+        const salvo = localStorage.getItem("modoAcessivel") === "true";
+        if (salvo) {
+          document.body.setAttribute("data-acessivel", "true");
+        }
+    
+        // Escuta o clique no botão
+        if (botao) {
+          botao.addEventListener("click", () => {
+            const atual = document.body.getAttribute("data-acessivel") === "true";
+            document.body.setAttribute("data-acessivel", !atual);
+            localStorage.setItem("modoAcessivel", String(!atual));
+          });
+        }
+      });
+    </script>
+    
+    
+
 
   </body>
 </html>
