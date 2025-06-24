@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOAÇÂO</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="estilo.css" />
   </head>
 
   <body>
@@ -14,6 +14,11 @@
                    
                     </li>             
                        <a href="RECICLAGEM.html">RECICLAGEM</a>
+
+
+
+
+                       <button id="acessibilidadeToggle">Modo Acessível</button>
 
 <h3>O QUE É DOAR?</h3>
 
@@ -26,12 +31,12 @@
 
 <p> Doação Pura: Transferência de bens sem condições, encargos ou restrições. O donatário recebe livremente.</p>
 
-<p> *Doação com Encargo*: O doador impõe uma obrigação ao donatário, que deve realizar algo em benefício do doador, de terceiros ou do interesse público.</p>
+<p> Doação com Encargo: O doador impõe uma obrigação ao donatário, que deve realizar algo em benefício do doador, de terceiros ou do interesse público.</p>
 
-<p>Doação Condicional*: A doação só é efetivada se uma condição específica for cumprida no futuro, ou seja, depende de um evento incerto.
+<p>Doação Condicional: A doação só é efetivada se uma condição específica for cumprida no futuro, ou seja, depende de um evento incerto.
 </p>
 
-<p> *Doação Modal*: O doador fornece recursos para que o donatário compre um bem específico. Neste caso, podem ocorrer dois tributos: ITCMD (Imposto sobre Transmissão Causa Mortis e Doação) pela doação e ITBI (Imposto sobre Transmissão de Bens Imóveis) pela compra.
+<p> Doação Modal: O doador fornece recursos para que o donatário compre um bem específico. Neste caso, podem ocorrer dois tributos: ITCMD (Imposto sobre Transmissão Causa Mortis e Doação) pela doação e ITBI (Imposto sobre Transmissão de Bens Imóveis) pela compra.
 </p>
 
 
@@ -84,5 +89,34 @@
       width="600"
       height="450"
     ></iframe>
+
+
+
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const botao = document.getElementById("acessibilidadeToggle");
+    
+        // Ativa o tema salvo
+        const salvo = localStorage.getItem("modoAcessivel") === "true";
+        if (salvo) {
+          document.body.setAttribute("data-acessivel", "true");
+        }
+    
+        // Escuta o clique no botão
+        if (botao) {
+          botao.addEventListener("click", () => {
+            const atual = document.body.getAttribute("data-acessivel") === "true";
+            document.body.setAttribute("data-acessivel", !atual);
+            localStorage.setItem("modoAcessivel", String(!atual));
+          });
+        }
+      });
+    </script>
+    
+
+
+
   </body>
 </html>
