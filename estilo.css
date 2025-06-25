@@ -1,117 +1,87 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #111111;
-  }
-  
-  [data-acessivel="true"] {
-    --bg-color: #000000;
-    --text-color: #ffffff;
-  }
-  
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-    padding: none
-  }
-  
-  button#acessibilidadeToggle {
-    padding: 10px 15px;
-    margin: 20px 0;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button#acessibilidadeToggle:hover {
-    background-color: #388e3c;
-  }
-
-
-  button#acessibilidadeToggle {
-    padding: 10px 15px;
-    margin: 20px 0;
-    background-color: #4caf50; /* Verde normal */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button#acessibilidadeToggle[data-ativo="true"] {
-    background-color: #ff9800; /* Laranja quando ativado */
-  }
-
-  button#acessibilidadeToggle:hover {
-    background-color: #388e3c;
-  }
-
-
-  /*RESPONSIVIDADE COM CELULARES */
-
-  @media (max-width: 450px) {
-  body {
-    font-size: 20px;
-  }
-  
-
-  h3{
-    color:#4caf50
-  }
-
-
-  .mapaGoogle {
-    width:"200";
-      height:"380";
-  }
+  --bg-color: #ffffff;
+  --text-color: #111111;
 }
 
+[data-acessivel="true"] {
+  --bg-color: #1A1A1A; /* Preto suave */
+  --text-color: #EAEAEA; /* Cinza claro */
+  --accent-color: #FF6600; /* Laranja vibrante */
+}
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  overflow-x: hidden; /* Evita rolagem lateral */
+}
 
+button#acessibilidadeToggle {
+  padding: 10px 15px;
+  margin: 20px 0;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+button#acessibilidadeToggle:hover {
+  background-color: #388e3c;
+}
 
+button#acessibilidadeToggle[data-ativo="true"] {
+  background-color: #ff9800; /* Laranja quando ativado */
+}
 
+button#acessibilidadeToggle:hover {
+  background-color: #388e3c;
+}
 
+/* Ajuste para o mapa Google */
+.mapaGoogle {
+  max-width: 100%; /* Limita o tamanho ao contêiner */
+  height: auto; /* Ajusta a altura proporcionalmente */
+  display: block; /* Garante que o mapa não cause vazamento */
+  margin: 0 auto; /* Centraliza o mapa */
+}
 
+/* RESPONSIVIDADE COM CELULARES */
+@media (max-width: 450px) {
+  body {
+    font-size: 19px;
+  }
 
+  
 
-
-
-
-
-
-
-
+  .mapaGoogle {
+    width: 100%; /* Ajusta o mapa para caber na tela */
+    height: 300; /* Define uma altura fixa */
+  }
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-  h3{
-    color:#a6ff00
+  h3 {
+    color: #a6ff00;
   }
 
   .mapaGoogle {
-    width:"300";
-      height:"380";
+    width: 100%; /* Ajusta o mapa para caber na tela */
+    height: 380px; /* Define uma altura fixa */
   }
-
 }
 
-@media (orientation: landscape){
-
+@media (orientation: landscape) {
   body {
     font-size: 16px;
   }
+
   .menu {
     display: none;
   }
 
-  h3{
-    color:#4caf50
-  }
+ 
 }
-
-  
-  
