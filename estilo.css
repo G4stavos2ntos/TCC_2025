@@ -4,9 +4,11 @@
 }
 
 [data-acessivel="true"] {
-  --bg-color: #1A1A1A; /* Preto suave */
-  --text-color: #EAEAEA; /* Cinza claro */
-  --accent-color: #FF6600; /* Laranja vibrante */
+  --bg-color: #F5F5F5; /* Preto suave */
+  --text-color:  #2E2E2E; /* Cinza claro */
+  
+  
+ 
 }
 
 body {
@@ -19,10 +21,16 @@ body {
   overflow-x: hidden; /* Evita rolagem lateral */
 }
 
+a{
+  color:#007BFF
+}
+
+/* ESTILO DO BOTAO DE ACESSIBILIDADE*/
+
 button#acessibilidadeToggle {
   padding: 10px 15px;
   margin: 20px 0;
-  background-color: #4caf50;
+  background-color:  #D55E00 ; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -30,16 +38,10 @@ button#acessibilidadeToggle {
 }
 
 button#acessibilidadeToggle:hover {
-  background-color: #388e3c;
+  background-color: #009E73;
 }
 
-button#acessibilidadeToggle[data-ativo="true"] {
-  background-color: #ff9800; /* Laranja quando ativado */
-}
 
-button#acessibilidadeToggle:hover {
-  background-color: #388e3c;
-}
 
 /* Ajuste para o mapa Google */
 .mapaGoogle {
@@ -58,15 +60,13 @@ button#acessibilidadeToggle:hover {
   
 
   .mapaGoogle {
-    width: 100%; /* Ajusta o mapa para caber na tela */
+    width: 200%; /* Ajusta o mapa para caber na tela */
     height: 300; /* Define uma altura fixa */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  h3 {
-    color: #a6ff00;
-  }
+ 
 
   .mapaGoogle {
     width: 100%; /* Ajusta o mapa para caber na tela */
