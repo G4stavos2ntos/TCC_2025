@@ -1,0 +1,242 @@
+body{
+   background-color: #d7fbe8;
+   font-family: 'Livvic', sans-serif;
+   font-size: larger;
+}
+
+h3{
+    font-family: 'Moon Dance', cursive;
+    font-size:x-large;
+}
+
+.caixa-reciclagem {
+  background-color: #62d2a2;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 50px 20px 10px; 
+  width: calc(100% - 60px);
+  color: #000;
+  box-sizing: border-box;
+  font-family: 'Livvic', sans-serif;
+}
+
+.linha {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse; /* inverte a ordem dos elementos */
+  display: flex;
+  align-items: flex-start; /* Alinhamento pelo topo */
+  justify-content: flex-end; /* Manda conteúdo para a direita */
+}
+
+.caixa-direita {
+  max-width: 950px; /* Controle opcional da largura do texto */
+}
+
+.imagem-lateral {
+  width: 210px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 100px; /* Mantém a distância da margem direita da tela */
+  margin-left: 5px;   /* Espaço entre texto e imagem */
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+input[name="carousel-control"] {
+  display: none;
+}
+
+.carousel-container {
+  width: 1050px; /* 4 cards * 250px + espaço */
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid #62d2a2;
+  border-radius: 20px;
+  background: #eaf7f3;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: 2500px; /* 10 cards * 250px */
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.image-space {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px;
+  background-color: #62d2a2;
+  border-radius: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.info {
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* Botões */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.btn {
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(98, 210, 162, 0.8);
+  color: white;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.image-space img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: lch(76.86% 45.5 161.8);
+}
+
+.prev-1, .prev-2, .prev-3 {
+  left: 10px;
+}
+
+.next-1, .next-2, .next-3 {
+  right: 10px;
+}
+
+/* Página 1: mostrar botões específicos */
+#page1:checked ~ .carousel-container .controls .prev-1,
+#page1:checked ~ .carousel-container .controls .next-1 {
+  display: inline-block;
+}
+
+/* Página 2 */
+#page2:checked ~ .carousel-container .controls .prev-2,
+#page2:checked ~ .carousel-container .controls .next-2 {
+  display: inline-block;
+}
+
+/* Página 3 */
+#page3:checked ~ .carousel-container .controls .prev-3,
+#page3:checked ~ .carousel-container .controls .next-3 {
+  display: inline-block;
+}
+
+/* Esconde todos os botões por padrão */
+.controls label {
+  display: none;
+}
+
+/* Movimentação do carrossel */
+#page1:checked ~ .carousel-container .carousel-track {
+  transform: translateX(0);
+}
+#page2:checked ~ .carousel-container .carousel-track {
+  transform: translateX(-1000px); /* 4 cards */
+}
+#page3:checked ~ .carousel-container .carousel-track {
+  transform: translateX(-1500px); /* últimos 2 cards */
+}
+
+/* Esconde os checkboxes */
+#toggle-comuns,
+#toggle-especiais {
+  display: none;
+}
+
+/* Estilo do botão */
+.toggle-button {
+  display: inline-block;
+  background-color: #62d2a2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #4bbd93;
+}
+
+/* Seções ocultas por padrão */
+.info-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: #62d2a2;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  width: 600px;  /* Ajuste aqui a largura desejada */
+}
+
+
+/* Mostrar cada section com seu próprio checkbox */
+#toggle-comuns:checked ~ #secao-comuns,
+#toggle-especiais:checked ~ #secao-especiais {
+  max-height: 1000px;
+  padding: 20px;
+  width: 600px;  /* Mesma largura */
+}
+
+
+.reciclagem-container {
+  display: flex;
+  align-items: flex-start; /* Alinha pelo topo */
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+.texto {
+  max-width: 700px;
+  font-family: 'Livvic', sans-serif;
+}
+
+.mapaGoogle iframe {
+  width: 450px;
+  height: 450px;
+  border: 5px solid #62d2a2;
+  border-radius: 50%;
+  object-fit: cover;
+}
