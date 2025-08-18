@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RECICLAGEM</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet"> <!-- fonte p -->
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> <!-- fonte H3 -->
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,33 +20,27 @@
                    
                     </li>             
                        <a href="DOAÇAO.html">DOAÇOES</a>
-
-
-
-
-                    
+                  
                        
                        <button id="acessibilidadeToggle">Modo Acessível</button>
 
-   
+<div class="caixa-reciclagem">
 <h3>O QUE É RECICLAGEM</h3>
-
 <p>A reciclagem é o processo de reaproveitamento de materiais descartados. O seu objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas. É considerada uma das alternativas mais eficientes para tratar os resíduos sólidos, tanto do ponto de vista ambiental quanto social, e está diretamente inserida no contexto da economia circular.</p>
+</div>
 
-<h3>O QUE SÃO RESIDUOS RECÍCLAVEIS</h3>
-
-<p>Define-se resíduo como todo material que sobra de determinado produto após sua utilização. Pode ser dividido entre resíduos sólidos e resíduos úmidos e/ou orgânicos. Ambos possuem grande potencial para serem reutilizados ou reciclados.</p>
-
-
-<h3>RESIDUOS RECICLAVEIS</h3>
-
-<p> Os resíduos recicláveis incluem materiais como papel, plástico, metal e vidro como Embalagens, Copos, Vidros especiais como tampa de forno micro-ondas, Frascos de remédio vazio, Potes de conserva, Cacos, Garrafas.</p>
+<h3>O QUE SÃO RESIDUOS:</h3>
+<p>Define-se resíduo, como todo material que sobra de determinado produto após sua utilização. Pode ser dividido entre resíduos sólidos e resíduos úmidos e/ou orgânicos. Ambos possuem grande potencial para serem reutilizados ou reciclados.</p>
 
 
+<h3>O QUE SÃO RESIDUOS RECICLAVEIS</h3>
 
-<h3>RESÍDUOS NÃO RECICLÁVEIS</h3>
+<p>O lixo reciclável refere-se a materiais que podem ser processados e transformados em novos produtos. Os resíduos recicláveis incluem materiais como papel, plástico, metal e vidro como Embalagens, Copos, Vidros especiais como tampa de forno micro-ondas, Frascos de remédio vazio, Potes de conserva, Cacos, Garrafas.</p>
 
-<p>itens como lixo hospitalar, restos de alimentos, produtos químicos, e certos tipos de plásticos complexos ou contaminados. Papel carbono, celofane, papel vegetal, papéis encerados ou plastificados, papel higiênico, guardanapos, etiquetas adesivas e fotografias também não são recicláveis</p>
+
+<h3>O QUE SÃO RESÍDUOS NÃO RECICLÁVEIS</h3>
+
+<p>O lixo não reciclável inclui materiais que não podem ser transformados em novos produtos de forma eficiente. São exemplos comuns plásticos complexos, produtos contaminados e resíduos perigosos, lixo hospitalar, restos de alimentos, produtos químicos, e certos tipos de plásticos contaminados, papel carbono, celofane, papel vegetal, papéis encerados ou plastificados, papel higiênico, guardanapos, etiquetas adesivas e fotografias também não são recicláveis</p>
 
 
 <h3>O QUE SÃO RESÍDUOS RECÍCLAGEM</h3>
@@ -51,84 +48,133 @@
 <p>são os materiais que não podem ser processados para serem transformados em novos produtos de forma eficiente e com o custo-benefício viável. São exemplos: papel plastificado, bitucas de cigarro, papel higiênico, esponja de aço, embalagens metálicas contaminadas, produtos químicos, resíduos orgânicos como restos de comida</p>
 
 
-<h3>RESÍDUOS COMUNS</h3>
+ <h3>RESÍDUOS COMUNS</h3>
+<p>Os resíduos comuns incluem materiais descartados por residências e empresas, que muitas vezes vão para aterros sanitários ou são reciclados. Exemplos incluem:</p>
 
-<P>Os resíduos comuns incluem materiais descartados por residências e empresas, que muitas vezes vão para aterros sanitários ou são reciclados. Exemplos incluem:</P>
-
-<ul>
-  <li>Restos de alimentos e cascas de frutas</li>
-  <li>Folhas, galhos e grama</li>
-  <li>Papéis, como jornais e papelão</li>
-  <li>Plásticos, como garrafas PET e sacolas</li>
-  <li>Latas de alumínio e aço</li>
-  <li>Vidros, como garrafas e potes</li>
-  <li>Copos e talheres descartáveis</li>
-  <li>Frascos de produtos de limpeza</li>
-  <li>Medicamentos vencidos, pilhas e baterias</li>
-  <li>Lâmpadas fluorescentes e fraldas descartáveis</li>
-  <li>Espelhos, cerâmica e porcelana</li>
-  <li>Bitucas de cigarro e esponjas de limpeza</li>
-  <li>Eletroeletrônicos (computadores, celulares, TVs)</li>
-  <li>Entulhos (cimento, tijolos, concreto)</li>
-</ul>
-
+<input type="checkbox" id="toggle-comuns">
+<label for="toggle-comuns" class="toggle-button">Mostrar Lista de Resíduos Comuns</label>
+<section class="info-section" id="secao-comuns">
+  <ul>
+    <li>Restos de alimentos e cascas de frutas</li>
+    <li>Folhas, galhos e grama</li>
+    <li>Papéis, como jornais e papelão</li>
+    <li>Plásticos, como garrafas PET e sacolas</li>
+    <li>Latas de alumínio e aço</li>
+    <li>Vidros, como garrafas e potes</li>
+    <li>Copos e talheres descartáveis</li>
+    <li>Frascos de produtos de limpeza</li>
+    <li>Medicamentos vencidos, pilhas e baterias</li>
+    <li>Lâmpadas fluorescentes e fraldas descartáveis</li>
+    <li>Espelhos, cerâmica e porcelana</li>
+    <li>Bitucas de cigarro</li>
+    <li>Esponjas de limpeza</li>
+    <li>Eletroeletrônicos (computadores, celulares, TVs)</li>
+    <li>Entulhos (cimento, tijolos, concreto)</li>
+  </ul>
+</section>
 
 <h3>RESÍDUOS ESPECIAIS</h3>
+<p>Resíduos especiais, também conhecidos como resíduos perigosos, são aqueles que precisam de um tratamento especial devido à sua composição química ou periculosidade para a saúde e o meio ambiente. Não devem ser descartados como lixo comum ou reciclável. O descarte correto desses resíduos é fundamental para evitar a contaminação e garantir um tratamento adequado.</p>
 
-<p>Resíduos especiais, também conhecidos como resíduos perigosos, são aqueles que precisam de um tratamento especial devido à sua composição química ou periculosidade para a saúde e o meio ambiente. Não devem ser descartados como lixo comum ou reciclável.</p>
-
-<p>Incluem itens como lâmpadas fluorescentes, pilhas e baterias, medicamentos, óleo de cozinha, eletrônicos, e resíduos de serviços de saúde.  O descarte correto desses resíduos é fundamental para evitar a contaminação e garantir um tratamento adequado</p>
+<input type="checkbox" id="toggle-especiais">
+<label for="toggle-especiais" class="toggle-button">Mostrar Lista de Resíduos Especiais</label>
+<section class="info-section" id="secao-especiais">
+  <ul>
+    <li>Lâmpadas fluorescentes</li>
+    <li>Pilhas e baterias</li>
+    <li>Medicamentos</li>
+    <li>Óleo de cozinha</li>
+    <li>Eletrônicos</li>
+    <li>Resíduos de serviços de saúde</li>
+    <li>Pneus</li>
+    <li>Rádios</li>
+  </ul>
+</section>
 
 
 
 <h3>CORES DOS LIXOS E SUAS FUNCIONALIDADE</h3>
 
-<p>Azul: Papel e papelão.
-    Vermelho: Plástico.
-    Verde: Vidro.
-    Amarelo: Metal.
-    Marrom: Resíduos orgânicos (restos de comida, podas, etc.).
-    Laranja: Resíduos perigosos (pilhas, baterias, produtos químicos).
-    Preto: Madeira e resíduos não recicláveis.
-    Cinza: Resíduos não recicláveis, contaminados ou cuja separação não é possível.
-    Branco: Resíduos de serviços de saúde (ex: agulhas, seringas).
-    Roxo: Resíduos radioativos.</p>
+<p>Os materiais são separados basicamente da seguinte forma: plásticos, metais, papéis, orgânicos, hospitalares, radioativos e madeira. E cada um desses materiais possui uma cor que o representa, dessa forma separado pelos coletores com as respectivas cores da coleta seletiva.</p>
 
+<input type="radio" name="carousel-control" id="page1" checked>
+<input type="radio" name="carousel-control" id="page2">
+<input type="radio" name="carousel-control" id="page3">
 
+<div class="carousel-container">
+  <div class="carousel-track">
+
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-bleue.png" alt="Simbolo azul"></div><div class="title">Azul</div><div class="info">Papel e papelão.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-rouge.png" alt="Simbolo Vermelho"></div><div class="title">Vermelho</div><div class="info">Plástico.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-vert.png" alt="Simbolo Verde"></div><div class="title">Verde</div><div class="info">Vidro.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-jaune.png" alt="Simbolo Amarelo"></div><div class="title">Amarelo</div><div class="info">Metal.</div></div>
+    <div class="card"><div class="image-space"><img src="" alt="Simbolo Marrom"></div><div class="title">Marrom</div><div class="info">Resíduos orgânicos.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-orange.png" alt="Simbolo Laranja"></div><div class="title">Laranja</div><div class="info">Resíduos perigosos.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-noir.png" alt="Simbolo Preto"></div><div class="title">Preto</div><div class="info">Madeira e não recicláveis.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-gris.png" alt="Simbolo Cinza"></div><div class="title">Cinza</div><div class="info">Resíduos contaminados.</div></div>
+    <div class="card"><div class="image-space"><img src="" alt="Simbolo Branco"></div><div class="title">Branco</div><div class="info">Serviços de saúde.</div></div>
+    <div class="card"><div class="image-space"><img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-violet.png" alt="Simbolo roxo"></div><div class="title">Roxo</div><div class="info">Resíduos radioativos.</div></div>
+
+  </div>
+
+  <!-- Botões de controle com rotação infinita -->
+  <div class="controls">
+    <!-- Página 1 -->
+    <label for="page3" class="btn prev-1">❮</label>
+    <label for="page2" class="btn next-1">❯</label>
+
+    <!-- Página 2 -->
+    <label for="page1" class="btn prev-2">❮</label>
+    <label for="page3" class="btn next-2">❯</label>
+
+    <!-- Página 3 -->
+    <label for="page2" class="btn prev-3">❮</label>
+    <label for="page1" class="btn next-3">❯</label>
+  </div>
+</div>
+
+<h3>CICLO DA RECICLAGEM</h3>
+
+  <p>Este ciclo começa com a coleta seletiva, que separa os resíduos recicláveis, como papel, plástico, vidro e metal. Em seguida, os materiais são transportados para centros de reciclagem, onde são processados para que possam ser reutilizados. Finalmente, os materiais reciclados são usados para produzir novos produtos, fechando o ciclo.</p>
 
     <h3>CICLO DE RESIDUOS ESPECIAIS</h3>
 
     <P>O ciclo de gestão de resíduos, especialmente os resíduos especiais, envolve várias etapas cruciais para garantir a sua correta destinação e minimizar o impacto ambiental. Começa com a coleta, passa pelo transporte e tratamento, e termina com a destinação final ou disposição ambiental.</P>
-
-
+  
+  <div class="linha">
+  <div class="caixa-direita">
     <h3>ETAPAS DO CICLO</h3>
-
-    <p>Identificação e Classificação – Determina a origem e o tipo de resíduo (ex: hospitalar, industrial, químico).
-        Coleta e Transporte – Feita por empresas especializadas até locais adequados.
-        Tratamento – Aplicação de métodos como incineração, desinfecção ou esterilização para reduzir riscos.
-        Destinação Final – Pode incluir reciclagem, reaproveitamento ou envio a aterros apropriados.
-        Disposição Ambiental Segura – Resíduos não aproveitáveis são depositados em aterros especiais, com controle ambiental.</p>
-
-
-
-<h3>CICLO DA RECICLAGEM</h3>
-
-<p>Este ciclo começa com a coleta seletiva, que separa os resíduos recicláveis, como papel, plástico, vidro e metal. Em seguida, os materiais são transportados para centros de reciclagem, onde são processados para que possam ser reutilizados. Finalmente, os materiais reciclados são usados para produzir novos produtos, fechando o ciclo.</p>
+    <p>
+  <strong>Identificação e Classificação</strong> – Determina a origem e o tipo de resíduo (ex: hospitalar, industrial, químico).<br>
+  <strong>Coleta e Transporte</strong> – Feita por empresas especializadas até locais adequados.<br>
+  <strong>Tratamento</strong> – Aplicação de métodos como incineração, desinfecção ou esterilização para reduzir riscos.<br>
+  <strong>Destinação Final</strong> – Pode incluir reciclagem, reaproveitamento ou envio a aterros apropriados.<br>
+  <strong>Disposição Ambiental Segura</strong> – Resíduos não aproveitáveis são depositados em aterros especiais, com controle ambiental.
+</p></div>
+<img src="https://i.pinimgproxy.com/?url=aHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS8yNTYvNTg0OC81ODQ4NTk5LnBuZw==&ts=1752450997&sig=0e758faaaa08fe9371f0d1dee9f63c69f48dce2a6034773106841607729dd76e" alt="Descrição" class="imagem-lateral"> 
+</div>
+</div>
 
 
 
+   <div class="reciclagem-container">
+  <div class="texto">
+    <h3>PONTOS DE RECICLAGEM EM OSASCO</h3>
+    <p>Reciclar é uma atitude simples que ajuda a preservar o meio ambiente, reduzindo a quantidade de lixo nos aterros e economizando recursos naturais. Separando e destinando corretamente seus resíduos, você contribui para um futuro mais limpo e sustentável.</p>
+    <p>Confira no mapa ao lado os pontos de reciclagem disponíveis próximos a você e faça parte dessa mudança.</p>
+    <p><strong>Dica:</strong> Para aproximar ou afastar o mapa, use o movimento de pinça com os dedos na tela do celular ou o scroll do mouse no computador. Os botões de controle de zoom ficam visíveis diretamente sobre o mapa.</p>
+</div>
 
-
-
-
-   <h3>PONTOS DE RECICLAGEM EM OSASCO</h3>
-
-<div class="mapaGoogle"></div>
+  <div class="mapaGoogle">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d117052.51036374026!2d-46.758845014171264!3d-23.536424340272262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sponto%20de%20reciclagem%20em%20osasco!5e0!3m2!1spt-BR!2sbr!4v1742228920193!5m2!1spt-BR!2sbr" 
-      width="600"
-      height="450"
-    ></iframe>
+      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d117052.51036374026!2d-46.758845014171264!3d-23.536424340272262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sponto%20de%20reciclagem%20em%20osasco!5e0!3m2!1spt-BR!2sbr!4v1742228920193!5m2!1spt-BR!2sbr"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
     
 
     <script>
