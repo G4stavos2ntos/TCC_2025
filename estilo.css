@@ -9,7 +9,7 @@ body[data-acessivel="true"] {
   --bg-color: #facfcf; /* Preto suave */
   --text-color: #2e2e2e; /* Cinza claro */
 }
-
+/*funçao que altera a cor do botao de acessibilidade*/
 body[data-acessivel="true"] button#acessibilidadeToggle {
   background-color: #d58000;
   color: #fff;
