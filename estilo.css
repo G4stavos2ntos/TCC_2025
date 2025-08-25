@@ -1,14 +1,19 @@
+/*cor do padrao do site*/
 :root {
   --bg-color: #ffffff;
   --text-color: #111111;
 }
 
-[data-acessivel="true"] {
-  --bg-color: #F5F5F5; /* Preto suave */
-  --text-color:  #2E2E2E; /* Cinza claro */
-  
-  
- 
+/*cor do modo acessibildade*/
+body[data-acessivel="true"] {
+  --bg-color: #facfcf; /* Preto suave */
+  --text-color: #2e2e2e; /* Cinza claro */
+}
+
+body[data-acessivel="true"] button#acessibilidadeToggle {
+  background-color: #d58000;
+  color: #fff;
+  border: 2px solid #222;
 }
 
 body {
@@ -21,8 +26,8 @@ body {
   overflow-x: hidden; /* Evita rolagem lateral */
 }
 
-a{
-  color:#007BFF
+a {
+  color: #007bff;
 }
 
 /* ESTILO DO BOTAO DE ACESSIBILIDADE*/
@@ -30,7 +35,7 @@ a{
 button#acessibilidadeToggle {
   padding: 10px 15px;
   margin: 20px 0;
-  background-color:  #D55E00 ; 
+  background-color: #009e73;
   color: white;
   border: none;
   border-radius: 5px;
@@ -38,10 +43,8 @@ button#acessibilidadeToggle {
 }
 
 button#acessibilidadeToggle:hover {
-  background-color: #009E73;
+  background-color: #009e73;
 }
-
-
 
 /* Ajuste para o mapa Google */
 .mapaGoogle {
@@ -57,8 +60,6 @@ button#acessibilidadeToggle:hover {
     font-size: 19px;
   }
 
-  
-
   .mapaGoogle {
     width: 200%; /* Ajusta o mapa para caber na tela */
     height: 300; /* Define uma altura fixa */
@@ -66,8 +67,6 @@ button#acessibilidadeToggle:hover {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
- 
-
   .mapaGoogle {
     width: 100%; /* Ajusta o mapa para caber na tela */
     height: 380px; /* Define uma altura fixa */
@@ -82,6 +81,4 @@ button#acessibilidadeToggle:hover {
   .menu {
     display: none;
   }
-
- 
 }
