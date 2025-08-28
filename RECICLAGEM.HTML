@@ -11,6 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #mapaGoogle {
+      height: 450px;
+      width: 100%;
+    }
+  </style>
+  
+    <!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Seu JS -->
+<script src="JAVASCRIPT-do-site.js"></script>
+
  <body class="pagina1">
   <nav>
     <ul class="barra-botoes">
@@ -163,39 +178,16 @@
 
   
   <div class="mapaGoogle" id="mapaGoogle" >
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d117052.51036374026!2d-46.758845014171264!3d-23.536424340272262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sponto%20de%20reciclagem%20em%20osasco!5e0!3m2!1spt-BR!2sbr!4v1742228920193!5m2!1spt-BR!2sbr"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+     <!-- Aqui o mapa aparece -->
+     <div id="mapaGoogle"></div>
+    </div>
   </div>
 </div>
 
     
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const botao = document.getElementById("acessibilidadeToggle");
     
-        // Ativa o tema salvo
-        const salvo = localStorage.getItem("modoAcessivel") === "true";
-        if (salvo) {
-          document.body.setAttribute("data-acessivel", "true");
-        }
-    
-        // Escuta o clique no botão
-        if (botao) {
-          botao.addEventListener("click", () => {
-            const atual = document.body.getAttribute("data-acessivel") === "true";
-            document.body.setAttribute("data-acessivel", !atual);
-            localStorage.setItem("modoAcessivel", String(!atual));
-          });
-        }
-      });
-    </script>
-    
-    
+  
 
 
   </body>
