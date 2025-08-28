@@ -18,42 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     // =========================
-    // Mapa Leaflet
+    // Mapa Leaflet centralizado em Jardim Elvira
     // =========================
-    const map = L.map("mapaGoogle").setView([-23.5329, -46.7915], 13);
+    const map = L.map("mapaGoogle").setView([-23.5265, -46.7970], 15); // Coordenadas centrais do bairro
   
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "© OpenStreetMap contributors",
     }).addTo(map);
   
     // =========================
-    // Pontos de Coleta Reais
+    // Pontos de Reciclagem Precisos
     // =========================
     const pontosReciclagem = [
       {
-        lat: -23.5325,
-        lng: -46.7915,
-        nome: "Ecoponto Helena Maria",
-        endereco: "Av. Walt Disney / R. Belmiro Alves da Silva, Jardim Elvira",
+        lat: -23.5056746,
+        lng: -46.7978832,
+        nome: "Praça Pastor José Maria da Silva",
+        endereco: "R. Pastor José Maria da Silva, 33 - Jardim Elvira, Osasco - SP, 06243-320",
         telefone: "(11) 3699-9999",
-        imagem: "imagens/ecoponto_helena_maria.jpg",
+        imagem: "imagens/praca_pastor_jose_maria.jpg",
       },
-      {
-        lat: -23.5330,
-        lng: -46.7920,
-        nome: "GC Coletas de Óleos Vegetais",
-        endereco: "Rua Frei Vicente Salvador, 65, Jardim Elvira",
-        telefone: "(11) 3696-9993",
-        imagem: "imagens/gc_coletas.jpg",
-      },
-      {
-        lat: -23.5340,
-        lng: -46.7930,
-        nome: "Ecoponto Jaguaribe",
-        endereco: "Rua Fernando Miolin Filho, nº 150, Jaguaribe",
-        telefone: "(11) 3698-8888",
-        imagem: "imagens/ecoponto_jaguaribe.jpg",
-      },
+      
     ];
   
     pontosReciclagem.forEach((ponto) => {
@@ -79,10 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
           const lat = position.coords.latitude;
           const lng = position.coords.longitude;
   
-          // Centraliza no usuário
           map.setView([lat, lng], 15);
   
-          // Marcador da sua localização
           L.marker([lat, lng])
             .addTo(map)
             .bindPopup("📍 Você está aqui!")
