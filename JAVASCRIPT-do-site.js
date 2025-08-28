@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================
     // Mapa Leaflet centralizado em Jardim Elvira
     // =========================
-    const map = L.map("mapaGoogle").setView([-23.5265, -46.7970], 15); // Coordenadas centrais do bairro
+    const map = L.map("mapaGoogle").setView([-23.5265, -46.7970], 15);
   
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "© OpenStreetMap contributors",
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         telefone: "(11) 3699-9999",
         imagem: "imagens/praca_pastor_jose_maria.jpg",
       },
-      
+      // Adicione outros pontos com coordenadas corretas aqui
     ];
   
     pontosReciclagem.forEach((ponto) => {
@@ -56,8 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     // =========================
-    // Sua Localização
+    // Localização do usuário (ou fallback manual)
     // =========================
+    const posicaoUsuario = { lat: -23.5265, lng: -46.7970 }; // Ponto central de Jardim Elvira
+    L.marker([posicaoUsuario.lat, posicaoUsuario.lng])
+      .addTo(map)
+      .bindPopup("📍 Ponto central de Jardim Elvira")
+      .openPopup();
+  
+    // Se quiser mesmo pegar a geolocalização real do usuário, pode descomentar:
+    
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         function (position) {
@@ -75,8 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Erro ao obter localização: ", error);
         }
       );
-    } else {
-      console.log("Geolocalização não é suportada neste navegador.");
     }
+    
   });
   
