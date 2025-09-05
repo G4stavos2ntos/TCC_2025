@@ -3,67 +3,474 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOAÇÃO</title>
-    <link rel="stylesheet" href="estilo.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Livvic&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Leaflet CSS -->
+    <title>DOAÇÂO</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet"> <!-- fonte p -->
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> <!-- fonte H3 -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-      #mapaGoogle {
-        height: 450px;
-        width: 100%;
-      }
-    </style>
+     <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #mapaGoogle {
+      width: 100%;
+      height: 500px; /* altura necessária para aparecer */
+      margin-top: 20px;
+    }
+  </style>
   </head>
-  <!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<!-- Seu JS -->
-<script src="JAVASCRIPT-do-site.js"></script>
+
+   
 
 
 
-  <body class="pagina2">
-    <nav>
-      <ul class="barra-botoes">
-        <li><a href="RECICLAGEM.html">RECICLAGEM</a></li>
-        <li>
-          <button id="acessibilidadeToggle">Modo Acessível</button>
-          <a href="#mapaGoogle">mapa</a>
+
+
+
+
+ <body class="pagina2">
+  <nav>
+    <ul class="barra-botoes">
+      <li><a href="RECICLAGEM.html">RECICLAGEM</a></li>
+      <li><button id="acessibilidadeToggle">Modo Acessível</button>
+          <a href="#mapaGoogle">PONTOS DE DOAÇÃO PROXIMOS</a>
+          </a>
         </li>
-      </ul>
-    </nav>
+    </ul>
+  </nav>
+  
+ <body class="pagina2">
+  <div class="logo-container pagina2">
+    <!-- Borrão de fundo -->
+    <img src="https://i.ibb.co/BVF5WJdc/C-pia-de-quadrinho-3-removebg-preview.png" 
+         alt="Borrão verde" class="borrão-fundo">
 
-    <div class="caixa">
-      <h1 class="titulo">DOE E AJUDE O MEIO AMBIENTE</h1>
-      <p class="texto">
-        Doe materiais recicláveis e contribua para a preservação do nosso
-        planeta. Cada pequena ação faz a diferença!
-      </p>
+    <!-- ECO em cima -->
+    <h1 class="eco">ECO</h1>
+
+    <!-- SOLIDARIO maior com ícone dentro do O -->
+    <h2 class="solidario">
+      S<img src="https://i.ibb.co/Y7mvCv5r/variante-de-bordas-arredondadas-em-forma-de-coracao-com-detalhes-em-branco-removebg-preview.png" 
+           alt="coração" class="icon-doação">LIDÁRIO
+    </h2>
+  </div>
+ 
+<div class="caixa-doaçao">
+<h3>O QUE É DOAR?</h3>
+<P> A doação é o ato pelo qual uma pessoa transfere bens ou vantagens para outra, geralmente por mera liberalidade, isto é, sem a exigência do cumprimento de condições como contrapartida.
+ Em outras palavras, a doação pode ser conceituada como um contrato em que um agente, plenamente capaz, transfere o seu patrimônio para outra, sem pedir nenhum pagamento em troca</P>
+</div>
+
+
+<h3>TIPOS DE DOAÇÃO</h3>
+<p>Existem diversas maneiras de fazer a diferença na vida de outras pessoas e na comunidade. Abaixo, você encontrará informações sobre Doações financeiras, Doações de bens materiais, Doações relacionadas à saúde, Doações de tempo e conhecimento e Doações em situações especiais.</p>
+<p>Click nos botões para acessar rapidamente detalhes sobre cada tipo de doação.</p>
+
+<div class="carrossel-wrapper">
+  <div class="doacoes-container">
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO EM DINHEIRO (PIX, DEPÓSITO, TRANSFERÊNCIA, CARTÃO, BOLETO)</h5>
+      <p>Doar dinheiro é a forma mais direta de apoiar instituições e projetos sociais. Com a doação, as organizações podem decidir como investir os recursos de acordo com suas necessidades imediatas, como compra de alimentos, medicamentos, materiais escolares ou manutenção de projetos comunitários.</p>
     </div>
 
-    <div class="reciclagem-container">
-      <div class="texto">
-        <h3>PONTOS DE DOAÇÃO EM OSSASCO</h3>
-        <p>
-          Confira no mapa os pontos de reciclagem disponíveis próximos a você.
-        </p>
-      </div>
-      <!-- Aqui o mapa aparece -->
-      <div id="mapaGoogle"></div>
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO RECORRENTE (APADRINHAMENTO MENSAL DE PROJETOS, FAMÍLIAS OU CRIANÇAS)</h5>
+      <p>O apadrinhamento mensal garante suporte contínuo a projetos e famílias. Essa forma de doação proporciona estabilidade financeira, permitindo que ONGs e instituições planejem ações de longo prazo, como cursos, reformas, atendimento médico ou programas educativos.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE PARTE DO IMPOSTO DE RENDA PARA FUNDOS SOCIAIS</h5>
+      <p>O contribuinte pode destinar uma porcentagem do imposto devido a fundos sociais, como o Fundo da Criança e do Adolescente ou Fundo do Idoso. Esse tipo de doação é legal, segura e permite apoiar múltiplos projetos sociais sem custo adicional, contribuindo para políticas públicas de assistência e inclusão.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO VIA PLATAFORMAS DE CROWDFUNDING (VAQUINHAS ONLINE)</h5>
+      <p>As vaquinhas online permitem arrecadar fundos para causas emergenciais, tratamentos médicos, educação, moradia ou projetos comunitários. Elas engajam pessoas de forma coletiva e rápida, tornando possível alcançar metas financeiras que beneficiem grupos ou indivíduos em situações de vulnerabilidade.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>COMPRA SOLIDÁRIA (PARTE DO VALOR DE PRODUTOS VAI PARA CAUSAS SOCIAIS)</h5>
+      <p>Algumas lojas destinam parte da venda de produtos para projetos sociais. Essa prática une consumo consciente com solidariedade, incentivando clientes a contribuírem para ações sociais apenas realizando compras. Ex.: artesanato de comunidades carentes ou produtos de empresas que apoiam ONGs.</p>
+    </div>
+    
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>ALIMENTOS (CESTAS BÁSICAS, REFEIÇÕES PRONTAS)</h5>
+      <p>Fornecem nutrição essencial a famílias em vulnerabilidade, garantindo acesso a refeições seguras e saudáveis, e combatendo a insegurança alimentar, especialmente em períodos de crise ou emergências.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>ROUPAS, CALÇADOS E ACESSÓRIOS</h5>
+      <p>Atendem às necessidades básicas de vestuário de pessoas em situação de rua, comunidades carentes ou vítimas de desastres. Além de aquecer, proporcionam dignidade e autoestima.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>BRINQUEDOS E JOGOS EDUCATIVOS</h5>
+      <p>Levam diversão e aprendizado a crianças que não têm acesso a brinquedos. Estimulam habilidades cognitivas, criatividade e socialização, contribuindo para o desenvolvimento infantil.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>MATERIAIS ESCOLARES (CADERNOS, MOCHILAS, LÁPIS)</h5>
+      <p>Apoiam a educação, garantindo que crianças e adolescentes tenham os recursos necessários para estudar, participar de atividades escolares e desenvolver habilidades acadêmicas.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>LIVROS E REVISTAS PARA BIBLIOTECAS COMUNITÁRIAS</h5>
+      <p>Promovem cultura, leitura e conhecimento em comunidades, incentivando a aprendizagem contínua e fortalecendo espaços de troca de ideias e desenvolvimento intelectual.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>PRODUTOS DE HIGIENE E LIMPEZA (SABÃO, ABSORVENTES, FRALDAS, ÁLCOOL)</h5>
+      <p>Ajudam na prevenção de doenças e na manutenção da saúde. Itens de higiene são essenciais, especialmente para crianças, idosos e famílias em situação de vulnerabilidade.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>MÓVEIS E ELETRODOMÉSTICOS</h5>
+      <p>Contribuem para a melhoria da qualidade de vida, permitindo mobiliar casas de famílias necessitadas e facilitar tarefas domésticas, como armazenamento de alimentos e conservação de produtos.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>EQUIPAMENTOS ELETRÔNICOS (COMPUTADORES, CELULARES, TABLETS)</h5>
+      <p>Proporcionam acesso à tecnologia, permitindo educação digital, pesquisa, comunicação e oportunidades de trabalho ou estudo remoto para pessoas que não têm recursos próprios.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>ITENS PARA PETS (RAÇÃO, MEDICAMENTOS, CASINHAS)</h5>
+      <p>Apoiam animais de abrigos e famílias de baixa renda, garantindo alimentação adequada, cuidados médicos e segurança, promovendo bem-estar animal.</p>
+    </div>
+    
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>MATERIAIS DE CONSTRUÇÃO (TIJOLOS, CIMENTO, TELHAS)</h5>
+      <p>Ajudam na reforma ou construção de casas, escolas e espaços comunitários, proporcionando moradia adequada e segura, além de melhorar a infraestrutura de comunidades carentes.</p>
     </div>
 
     
-      
-    </footer>
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE SANGUE</h5>
+      <p>é essencial para salvar vidas em cirurgias, emergências, acidentes e tratamentos médicos. um único doador pode salvar até quatro pessoas, sendo um ato contínuo de solidariedade.</p>
+    </div>
+
+    
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE MEDULA ÓSSEA (VIA CADASTRO DE DOADOR)</h5>
+      <p>Pode curar doenças graves como leucemia e outras doenças hematológicas. O doador precisa se cadastrar em um banco de dados e, quando compatível, realiza o procedimento, podendo salvar vidas de pacientes em necessidade urgente.</p>
+    </div>
+
+    
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE ÓRGÃOS E TECIDOS (EM VIDA OU PÓS-MORTE: RIM, FÍGADO, CÓRNEAS ETC.)</h5>
+      <p>Salva vidas de pessoas que aguardam transplantes. Doações em vida geralmente envolvem rim ou parte do fígado, enquanto doações pós-morte podem incluir coração, pulmão, córneas e outros tecidos vitais.</p>
+    </div>
+
+    
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE LEITE MATERNO</h5>
+      <p>Beneficia bebês prematuros ou com problemas de saúde, garantindo nutrição essencial, fortalecimento imunológico e desenvolvimento saudável.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE CABELO PARA CONFECÇÃO DE PERUCAS PARA PACIENTES COM CÂNCER</h5>
+      <p>Contribui para autoestima e bem-estar emocional de pessoas em tratamento oncológico, oferecendo conforto e segurança durante processos de perda de cabelo.</p>
+    </div>
+  
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE MEDICAMENTOS NÃO VENCIDOS</h5>
+      <p>Permite que pessoas sem recursos tenham acesso a tratamentos, prevenindo doenças e reduzindo impactos da falta de assistência médica.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE CADEIRAS DE RODAS, MULETAS, PRÓTESES E ÓRTESES</h5>
+      <p>Facilita a mobilidade e independência de pessoas com deficiência ou limitações físicas, promovendo inclusão social e melhor qualidade de vida.</p>
+    </div>
+
+    <div class="doacao-card">
+      <img src="https://i.ibb.co/7J4gjSsv/2113827-removebg-preview.png" alt="Doações de tempo e conhecimento" class="imagem">
+      <h5>TRABALHO VOLUNTÁRIO EM ONGS, HOSPITAIS, ASILOS, ABRIGOS, CRECHES</h5>
+      <p>Oferece atenção, cuidado e suporte direto às pessoas, fortalecendo a rede de solidariedade e promovendo impacto positivo na vida de quem recebe ajuda.</p>
+    </div>
+
+    <div class="doacao-card">
+      <img src="https://i.ibb.co/7J4gjSsv/2113827-removebg-preview.png" alt="Doações de tempo e conhecimento" class="imagem">
+      <h5>SERVIÇOS PROFISSIONAIS GRATUITOS (EX.: MÉDICOS, ADVOGADOS, PSICÓLOGOS, PROFESSORES)</h5>
+      <p>Permite que pessoas sem condições financeiras recebam atendimento essencial, como cuidados médicos, orientação legal, apoio psicológico ou educação, garantindo igualdade de oportunidades.</p>
+    </div>
+
+    <div class="doacao-card">
+      <img src="https://i.ibb.co/7J4gjSsv/2113827-removebg-preview.png" alt="Doações de tempo e conhecimento" class="imagem">
+      <h5>MENTORIA OU AULAS GRATUITAS (REFORÇO ESCOLAR, CURSOS DE CAPACITAÇÃO)</h5>
+      <p>Apoia o desenvolvimento intelectual e profissional de crianças, jovens e adultos, aumentando chances de emprego, autonomia e crescimento pessoal.</p>
+    </div>
+
+    <div class="doacao-card">
+      <img src="https://i.ibb.co/7J4gjSsv/2113827-removebg-preview.png" alt="Doações de tempo e conhecimento" class="imagem">
+      <h5>APOIO EMOCIONAL (ESCUTA ATIVA, GRUPOS DE APOIO, ATENDIMENTO PSICOLÓGICO VOLUNTÁRIO)</h5>
+      <p>Oferece conforto e acolhimento, ajuda a reduzir ansiedade e depressão, e fortalece a resiliência emocional de pessoas em situações de vulnerabilidade.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>CAMPANHAS EMERGENCIAIS (ENCHENTES, DESASTRES, INCÊNDIOS, GUERRAS, PANDEMIAS)</h5>
+      <p>Atendem pessoas afetadas rapidamente, fornecendo alimentos, água, roupas, remédios e abrigo, ajudando na recuperação e reconstrução de vidas e comunidades.</p>
+    </div>
+    
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE RECICLAGEM (ÓLEO DE COZINHA USADO, TAMPINHAS, LATINHAS, GARRAFAS PET)</h5>
+      <p>Materiais recicláveis são coletados e convertidos em recursos financeiros ou produtos para apoiar projetos sociais, unindo sustentabilidade e solidariedade.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO EM EVENTOS BENEFICENTES (RIFAS, BAZARES, LEILÕES, SHOWS, BRECHÓS)</h5>
+      <p>Reúne a comunidade para arrecadar fundos, gerar engajamento social e apoiar instituições ou projetos específicos.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE QUILOMETRAGEM DE VIAGENS, MILHAS AÉREAS OU PONTOS DE PROGRAMAS DE FIDELIDADE</h5>
+      <p>Auxilia no transporte de pacientes, voluntários ou familiares, garantindo deslocamento para tratamentos médicos, atividades educacionais ou voluntariado.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE TERRENOS OU IMÓVEIS PARA FINS SOCIAIS</h5>
+      <p>Servem como espaço para escolas, abrigos, creches ou centros comunitários, beneficiando diretamente comunidades e proporcionando infraestrutura para programas sociais.</p>
+    </div>
+
+    <div class="doacao-card">
+      <div class="imagem"></div>
+      <h5>DOAÇÃO DE ENERGIA SOLAR EXCEDENTE (EM ALGUNS PROGRAMAS DE ENERGIA COMPARTILHADA)</h5>
+      <p>Reduz custos de energia elétrica de instituições sociais, promove o uso de energia limpa e contribui para sustentabilidade ambiental e economia em longo prazo.</p>
+    </div>
+  </div>
+</div>
+
+<h3>DATAS ESPECIAIS PARA DOAR</h3>
+<p>No Brasil, o Dia de Doar foi realizado pela primeira vez em 2013, um ano depois da primeira edição nos Estados Unidos, em 2012. A partir de 2014, o Brasil passou a fazer parte do movimento global, que hoje conta com mais de 90 países participando oficialmente.</p>
+
+<ul>
+  <li>
+    <strong>03 de dezembro – Dia de Doar:</strong> Em 2024, a 11ª edição ocorreu em 3 de dezembro, consolidando o movimento no país.
+  </li>
+  <li>
+    <strong>14 de junho – Dia Mundial do Doador de Sangue:</strong> Instituído pela Organização Mundial da Saúde, essa data visa agradecer aos doadores e incentivar doações regulares.
+  </li>
+  <li>
+    <strong>25 de novembro – Dia Nacional do Doador de Sangue:</strong> Celebrada no Brasil para reforçar a importância social desse gesto solidário.
+  </li>
+  <p>Outras datas simbólicas e relevantes ao longo do ano:</p>
+  <li>
+    <strong>28 de novembro – Dia de Doar (2023):</strong> Em 2023, o movimento ocorreu em 28 de novembro.
+  </li>
+</ul>
+
+<h3>EVENTOS SOLIDÁRIOS (FEIRAS, MARATONAS, SHOWS ETC.)</h3>
+<ul>
+  <li><strong>Teleton 2024 (SBT/AACD):</strong> Na 27ª edição, ainda sem a presença de Sílvio Santos, a campanha superou a meta e arrecadou cerca de R$ 36 milhões.</li>
+  <li><strong>Corrida solidária (Terry Fox Run, Floripa):</strong> Um exemplo em Florianópolis — Terry Fox Run — mostra como corridas podem ter significado beneficente, homenageando causas como a luta contra o câncer.</li>
+  <li><strong>Corrida com doação de donativos pela Marinha:</strong> Evento beneficente que arrecadou aproximadamente 1 tonelada de alimentos e roupas no Rio de Janeiro.</li>
+</ul>
+
+<h3>COMO A DOAÇÃO TRANSFORMA (ESTATÍSTICAS)</h3>
+
+<p>R$ 24,3 BILHÕES — valor estimado das doações individuais no Brasil em 2024, um crescimento em relação aos R$ 14,8 bilhões de 2022 .
+Esses dados fazem parte da pesquisa "PesquisA DOAÇÃO BRASIL 2024" pelo IDIS.</p>
+
+
+<h3>BOAS PRÁTICAS EM DOAÇÕES FÍSICAS</h3>
+<p>Além das doações financeiras, é comum doar roupas, brinquedos, alimentos e outros itens. Para que essa ajuda seja realmente útil, algumas recomendações são importantes:</p>
+<ul>
+  <li><strong>Roupas:</strong> doar peças limpas, lavadas e em bom estado (evitar roupas rasgadas ou manchadas).</li>
+  <li><strong>Brinquedos:</strong> garantir que estejam funcionando, sem partes quebradas que possam machucar crianças.</li>
+  <li><strong>Alimentos:</strong> priorizar alimentos não perecíveis, dentro do prazo de validade e com embalagens intactas.</li>
+  <li><strong>Eletrodomésticos ou móveis:</strong> verificar se estão em condições de uso seguro.</li>
+  <li><strong>Livros e materiais escolares:</strong> doar somente aqueles que estejam completos e em condições de reutilização.</li>
+</ul>
+<p><strong>Boa-fé e Responsabilidade Social:</strong> Toda doação deve respeitar tanto a vontade do doador quanto os direitos e a dignidade do beneficiário, cumprindo seu papel de promover solidariedade e bem-estar social.</p>
+
+<h3>REQUISITOS PARA UMA DOAÇÃO VÁLIDA E SEGURA</h3>
+
+<p>Para que uma doação seja considerada válida, segura e efetiva, é necessário observar alguns pontos legais e práticos:</p>
+
+<div class="doacao-flex">
+  <div class="doacao-item">
+    <strong>TRANSPARÊNCIA E LEGALIDADE</strong>
+    <ul>
+      <li>Nas doações online, é essencial verificar se a campanha ou instituição é confiável. Cheque o CNPJ, histórico de atuação, relatórios de atividades e canais de contato.</li>
+      <li>A doação deve ser registrada sempre que possível, por meio de comprovantes eletrônicos ou recibos, garantindo rastreabilidade e segurança.</li>
+      <li>Para doações de bens de maior valor (como imóveis, veículos ou grandes quantias), pode ser necessário formalizar a doação por contrato ou escritura pública, conforme previsto na legislação brasileira.</li>
+    </ul>
+  </div>
+
+  <div class="doacao-item">
+    <strong>VOLUNTARIEDADE</strong>
+    <ul>
+      <li>A doação deve ser um ato espontâneo, sem qualquer tipo de coação, pressão ou engano.</li>
+      <li>O doador precisa estar em pleno gozo de suas capacidades civis — ou seja, ser maior de idade e capaz de responder pelos seus atos.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<h4>SEGURANÇA NAS TRANSAÇÕES</h4>
+<ul>
+  <li>Use plataformas seguras (como Vakinha, Para Quem Doar, Doare e similares).</li>
+  <li>Prefira sites com certificado SSL (cadeado na barra de navegação).</li>
+  <li>Nunca forneça dados sensíveis (senhas, tokens bancários) fora de ambientes protegidos.</li>
+</ul>
+
+
+<h3>SEGURANÇA AO DOAR (DICAS DE DOAÇÕES ONLINE E PRESENCIAIS)</h3>
+<p>A Fundação Telefônica Vivo oferece orientações práticas para garantir segurança nas doações:</p>
+
+<ul>
+  <li>Identificar claramente o autor ou responsável pela campanha.</li>
+  <li>Conhecer o histórico e a transparência do projeto.</li>
+  <li>Verificar segurança do site (SSL, boleto claro, cuidado com dados sensíveis).</li>
+  <li>Evitar campanhas com arrecadações exageradas e baixa visibilidade.</li>
+  <li>Atenção a possíveis sites clonados e golpes que se aproveitam de tragédias.</li>
+  <li>A Receita Federal habilitou um painel novo para consultar destinações feitas ao imposto de renda — importante ferramenta de verificação para doações feitas por meio de fundos sociais.</li>
+</ul>
+
+<h3>VOLUNTARIADO: COMO DOAR TEMPO E HABILIDADES</h3>
+<p>
+  Em 2017, o número de pessoas engajadas em trabalho voluntário aumentou em 840 mil — totalizando 7,4 milhões de voluntários no país.
+  Outros dados específicos sobre voluntariado em ONGs, sociedades religiosas e escolas podem ser encontrados em estudos do IBGE/PNAD e relatórios como o Brazil Giving Report pela CAF, embora não tenham sido detalhados nas pesquisas rápidas feitas até agora.
+</p>
+
+
+
+   <div class="reciclagem-container">
+    <div class="texto">
+    <h3>PONTOS DE DOAÇÃO EM OSSASCO</h3>
+    <p>Reciclar é uma atitude simples que ajuda a preservar o meio ambiente, reduzindo a quantidade de lixo nos aterros e economizando recursos naturais. Separando e destinando corretamente seus resíduos, você contribui para um futuro mais limpo e sustentável.</p>
+    <p>Confira no mapa ao lado os pontos de reciclagem disponíveis próximos a você e faça parte dessa mudança.</p>
+    <p><strong>Dica:</strong> Para aproximar ou afastar o mapa, utilize o movimento de pinça com os dedos. Encontre sua residência e localize o ponto de coleta mais próximo, identificado pelos pontos vermelhos. Clique nesse ponto para ver mais informações e, em seguida, pressione "Ver mapa ampliado" para ser direcionado ao Google Maps.</p>
+  </div>
+  
+  <div id="mapaGoogle"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Inicialização direta do mapa -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mapaElemento = document.getElementById("mapaGoogle");
+      if (mapaElemento) {
+        const map = L.map("mapaGoogle").setView([-23.5200, -46.8000], 14);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> colaboradores'
+        }).addTo(map);
+
+        // Marcadores de exemplo
+        L.marker([-23.515000, -46.805000])
+          .addTo(map)
+          .bindPopup("📍 Igreja Solidária")
+          .openPopup();
+
+        L.marker([-23.510000, -46.800000])
+          .addTo(map)
+          .bindPopup("📍 Centro de Doações Jardim Elvira");
+      }
+    });
+  </script>
+
+<h3>COMO DOAR ONLINE</h3>
+<P>Para doar online, primeiro escolha a organização ou causa que deseja apoiar, seja uma instituição filantrópica, uma campanha específica ou um projeto individual. Em seguida, acesse a plataforma de doação, que pode estar disponível no site da própria organização ou em plataformas como Vakinha, Para Quem Doar ou Doare. Depois, selecione a forma de doação, optando entre cartão de crédito, Pix, boleto bancário ou transferência bancária. Preencha as informações necessárias, como o valor e os dados do pagamento. Por fim, confira todos os dados e finalize a doação.</P>
+
+<h3>POR QUE É IMPORTANTE DOAR ONLINE?</h3>
+  <p>Doar online é importante porque representa uma forma eficiente, acessível e segura de apoiar causas e organizações sem fins lucrativos. Com o avanço da tecnologia, as plataformas digitais tornaram o processo de doação mais simples e rápido, permitindo que qualquer pessoa, com apenas alguns cliques, contribua para iniciativas sociais, ambientais, educacionais, de saúde, entre outras.</p>
+  <p>Além disso, a doação online amplia significativamente o alcance das campanhas, permitindo que organizações recebam apoio de pessoas em diferentes regiões do país ou até do mundo. Isso fortalece projetos que promovem mudanças reais na vida de comunidades e indivíduos.</p>
+
+<h3>LINKS PARA DOAR ONLINE</h3>
+   <p>Através dos links abaixo, você pode fazer suas doações de maneira prática e confiável. Escolha a instituição ou campanha que deseja apoiar e faça a diferença na vida de quem precisa. Cada contribuição, por menor que seja, ajuda a transformar realidades.</p>
+
+  <div class="doacoes-links-container">
+
+  <div class="link-item">
+    <a class="botao-doar" href="https://bancodealimentos.colabore.org/sabedoria-popular/single_step?utm_campaign=pf&utm_medium=botao&utm_source=site" target="_blank">Banco de Alimentos</a>
+    <p>Banco de Alimentos - É um grande site de doações que trabalha com alimentos frescos para pessoas em situação de vulnerabilidade.</p>
+  </div>
+
+  <div class="link-item">
+    <a class="botao-doar" href="https://amorexigente.org/" target="_blank">ONG Amor-Exigente</a>
+    <p>A Amor - Exigente aceita doações de roupas, alimentos e objetos. É possível localizar pontos de coleta e campanhas no site.</p>
+  </div>
+
+  <div class="link-item">
+    <a class="botao-doar" href="https://institutoronald.org.br/" target="_blank">Instituto Ronald McDonald</a>
+    <p>Instituto Ronald McDonald - Ajuda crianças com câncer e suas famílias. Aceita doações financeiras e de itens diversos, com informações no site.</p>
+  </div>
+
+  <div class="link-item">
+    <a class="botao-doar" href="https://www.exercitodoacoes.org.br/" target="_blank">Exército da Salvação</a>
+    <p>Exército da Salvação - Aceita roupas, móveis, brinquedos e alimentos, com postos de coleta em várias cidades.</p>
+  </div>
+
+  <div class="link-item">
+    <a class="botao-doar" href="https://www.campanhadoagasalho.sp.gov.br/" target="_blank">Campanha do Agasalho</a>
+    <p>Campanha do Agasalho - Campanha presente em várias regiões do Brasil. Aceita roupas, cobertores e itens de vestuário.</p>
+  </div>
+
+  <div class="link-item">
+    <a class="botao-doar" href="https://doe.cicv.org.br/salvar-vidas/people/new?utm_source=google&utm_medium=search&utm_campaign=acquisition&utm_content=generic-terms&gclid=CjwKCAjw_ZC2BhAQEiwAXSgClguDutyb55Lp0GfrPsHCPIV71aMeRPnmjJmXeSs57qVHcfbbVZo-rhoCMAkQAvD_BwE" target="_blank">Cruz Vermelha Brasileira</a>
+    <p>Cruz Vermelha Brasileira - Aceita roupas, alimentos, produtos de higiene e outros itens essenciais. As campanhas variam por localidade.</p>
+  </div>
+
+</div>
+
+
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const botao = document.getElementById("acessibilidadeToggle");
+    
+        // Ativa o tema salvo
+        const salvo = localStorage.getItem("modoAcessivel") === "true";
+        if (salvo) {
+          document.body.setAttribute("data-acessivel", "true");
+        }
+    
+        // Escuta o clique no botão
+        if (botao) {
+          botao.addEventListener("click", () => {
+            const atual = document.body.getAttribute("data-acessivel") === "true";
+            document.body.setAttribute("data-acessivel", !atual);
+            localStorage.setItem("modoAcessivel", String(!atual));
+          });
+        }
+      });
+    </script>
 
   </body>
 </html>
