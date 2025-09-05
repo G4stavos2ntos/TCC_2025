@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RECICLAGEM</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet"> <!-- fonte p -->
-    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> <!-- fonte H3 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECICLAGEM</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
 
-  </head>
-
-  <!-- Leaflet CSS -->
+  <!-- CSS necessário para o mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
   <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
     #mapaGoogle {
-      height: 450px;
       width: 100%;
+      height: 500px;
+      margin-top: 20px;
     }
   </style>
+</head>
   
-    <!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<!-- Seu JS -->
-<script src="JAVASCRIPT-do-site.js"></script>
+  
+  <body class="pagina1">
 
- <body class="pagina1">
-  <nav>
+    <nav>
+
     <ul class="barra-botoes">
       <li><a href="DOAÇAO.html">DOAÇÕES</a></li>
       <li><button id="acessibilidadeToggle">Modo Acessível</button>
-      <a href="#mapaGoogle">mapa</a></li>
+      <a href="#mapaGoogle">PONTOS DE COLETA PROXIMOS</a></li>
     </ul>
   </nav>
 
- <div class="caixa-reciclagem">
-<h3>O QUE É RECICLAGEM</h3>
-<p>A reciclagem é o processo de reaproveitamento de materiais descartados. O seu objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas. É considerada uma das alternativas mais eficientes para tratar os resíduos sólidos, tanto do ponto de vista ambiental quanto social, e está diretamente inserida no contexto da economia circular.</p>
+  <div class="logo-container">
+  <img src="https://i.ibb.co/LdJC97Wc/C-pia-de-quadrinho-removebg-preview.png" 
+       alt="Borrão verde" class="borrão-fundo">
+  <h1 class="eco">
+    EC
+    <img src="https://icones.pro/wp-content/uploads/2022/05/icone-de-recyclage-et-de-durabilite-noir.png" alt="Reciclagem" class="icon-reciclagem">
+  </h1>
+  <h2 class="solidario">SOLIDÁRIO</h2>
 </div>
+
+<div class="caixa-reciclagem">
+    <h3>O QUE É RECICLAGEM</h3>
+    <p>A reciclagem é o processo de reaproveitamento de materiais descartados. O seu objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas. É considerada uma das alternativas mais eficientes para tratar os resíduos sólidos, tanto do ponto de vista ambiental quanto social, e está diretamente inserida no contexto da economia circular.</p>
+  </div>
 
  <h3>O QUE SÃO RESIDUOS:</h3>
 <p>Define-se resíduo, como todo material que sobra de determinado produto após sua utilização. Pode ser dividido entre resíduos sólidos e resíduos úmidos e/ou orgânicos. Ambos possuem grande potencial para serem reutilizados ou reciclados.</p>
 
 
-<h3>O QUE SÃO RESIDUOS RECICLAVEIS</h3>
-
-<p>O lixo reciclável refere-se a materiais que podem ser processados e transformados em novos produtos. Os resíduos recicláveis incluem materiais como papel, plástico, metal e vidro como Embalagens, Copos, Vidros especiais como tampa de forno micro-ondas, Frascos de remédio vazio, Potes de conserva, Cacos, Garrafas.</p>
-
-
-<h3>O QUE SÃO RESÍDUOS NÃO RECICLÁVEIS</h3>
-
-<p>O lixo não reciclável inclui materiais que não podem ser transformados em novos produtos de forma eficiente. São exemplos comuns plásticos complexos, produtos contaminados e resíduos perigosos, lixo hospitalar, restos de alimentos, produtos químicos, e certos tipos de plásticos contaminados, papel carbono, celofane, papel vegetal, papéis encerados ou plastificados, papel higiênico, guardanapos, etiquetas adesivas e fotografias também não são recicláveis</p>
-
-
-<h3>O QUE SÃO RESÍDUOS RECÍCLAGEM</h3>
-
-<p>são os materiais que não podem ser processados para serem transformados em novos produtos de forma eficiente e com o custo-benefício viável. São exemplos: papel plastificado, bitucas de cigarro, papel higiênico, esponja de aço, embalagens metálicas contaminadas, produtos químicos, resíduos orgânicos como restos de comida</p>
+<div class="residuos-container">
+  <div class="residuo">
+    <h3>O QUE SÃO RESÍDUOS RECICLÁVEIS</h3>
+    <p>O lixo reciclável refere-se a materiais que podem ser processados e transformados em novos produtos. Os resíduos recicláveis incluem materiais como papel, plástico, metal e vidro como Embalagens, Copos, Vidros especiais como tampa de forno micro-ondas, Frascos de remédio vazio, Potes de conserva, Cacos, Garrafas.</p>
+  </div>
+  
+  <div class="residuo">
+    <h3>O QUE SÃO RESÍDUOS NÃO RECICLÁVEIS</h3>
+    <p>O lixo não reciclável inclui materiais que não podem ser transformados em novos produtos de forma eficiente. São exemplos comuns plásticos complexos, produtos contaminados e resíduos perigosos, lixo hospitalar, restos de alimentos, produtos químicos, e certos tipos de plásticos contaminados, papel carbono, celofane, papel vegetal, papéis encerados ou plastificados, papel higiênico, guardanapos, etiquetas adesivas e fotografias também não são recicláveis.</p>
+  </div>
+</div>
 
 
  <h3>RESÍDUOS COMUNS</h3>
@@ -101,7 +111,6 @@
     <li>Rádios</li>
   </ul>
 </section>
-
 
 
 <h3>CORES DOS LIXOS E SUAS FUNCIONALIDADE</h3>
@@ -160,35 +169,246 @@
   <strong>Coleta e Transporte</strong> – Feita por empresas especializadas até locais adequados.<br>
   <strong>Tratamento</strong> – Aplicação de métodos como incineração, desinfecção ou esterilização para reduzir riscos.<br>
   <strong>Destinação Final</strong> – Pode incluir reciclagem, reaproveitamento ou envio a aterros apropriados.<br>
-  <strong>Disposição Ambiental Segura</strong> – Resíduos não aproveitáveis são depositados em aterros especiais, com controle ambiental.
-</p></div>
-<img src="https://i.pinimgproxy.com/?url=aHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS8yNTYvNTg0OC81ODQ4NTk5LnBuZw==&ts=1752450997&sig=0e758faaaa08fe9371f0d1dee9f63c69f48dce2a6034773106841607729dd76e" alt="Descrição" class="imagem-lateral"> 
+  <strong>Disposição Ambiental Segura</strong> – Resíduos não aproveitáveis são depositados em aterros especiais, com controle ambiental.</p></div>
+<img src="https://i.ibb.co/G3tcFm9F/usina-de-reciclagem-removebg-preview.png" alt="usina-de-reciclagem" class="imagem-lateral"> 
 </div>
 </div>
 
+<h3>EMPRESAS E ONGS QUE TRABALHAM COM RECICLAGEM</h3>
+<p>Existem diversas organizações que incentivam e realizam a reciclagem de maneira organizada. Cooperativas de catadores, Instituto Muda e projetos como Reciclus (voltado para eletrônicos) coletam resíduos, transformam materiais descartados em produtos reaproveitáveis e promovem inclusão social, educação ambiental e geração de emprego.</p>
 
+<div class="flip-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Ecobraz Emigre
+      </div>
+      <div class="flip-card-back">
+        A Ecobraz Emigre, por meio do Projeto Reciclando, atua na coleta e reciclagem de resíduos eletrônicos, promovendo a triagem e o recondicionamento de equipamentos que são transformados em centros tecnológicos voltados para comunidades em situação de vulnerabilidade. Dessa forma, a iniciativa contribui para a inclusão digital, a educação ambiental e a compensação de carbono.
+      </div>
+    </div>
+  </div>
 
-   <div class="reciclagem-container">
-  <div class="texto">
-    <h3>PONTOS DE RECICLAGEM EM OSASCO</h3>
-    <p>Reciclar é uma atitude simples que ajuda a preservar o meio ambiente, reduzindo a quantidade de lixo nos aterros e economizando recursos naturais. Separando e destinando corretamente seus resíduos, você contribui para um futuro mais limpo e sustentável.</p>
-    <p>Confira no mapa ao lado os pontos de reciclagem disponíveis próximos a você e faça parte dessa mudança.</p>
-    <p><strong>Dica:</strong> Para aproximar ou afastar o mapa, utilize o movimento de pinça com os dedos. Encontre sua residência e localize o ponto de coleta mais próximo, identificado pelos pontos vermelhos. Clique nesse ponto para ver mais informações e, em seguida, pressione "Ver mapa ampliado" para ser direcionado ao Google Maps.</p>
-</div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Reciclus
+      </div>
+      <div class="flip-card-back">
+        A Reciclus é responsável pela logística reversa de lâmpadas contendo mercúrio no Brasil, disponibilizando pontos de entrega em todo o país para coleta, transporte e destinação ambientalmente adequada. Além de sua atuação operacional, a entidade mantém o programa Reciclus Educa, que desenvolve ações de educação ambiental e já distribuiu milhares de cartilhas e capacitou professores para a disseminação de práticas sustentáveis em escolas.
+      </div>
+    </div>
+  </div>
 
-  
-  <div class="mapaGoogle" id="mapaGoogle" >
-     <!-- Aqui o mapa aparece -->
-     <div id="mapaGoogle"></div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Aliança pela Reciclagem
+      </div>
+      <div class="flip-card-back">
+        A Aliança pela Reciclagem é uma plataforma criada em parceria com o setor privado e organizações sociais, com base na Política Nacional de Resíduos Sólidos. Seu trabalho consiste em fortalecer cooperativas de catadores por meio de capacitação técnica e autonomia administrativa, tendo já revertido centenas de milhares de toneladas de resíduos e promovido a integração de centenas de empresas em diferentes estados do país.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Descarte Correto
+      </div>
+      <div class="flip-card-back">
+        A Descarte Correto, empresa social sediada em Manaus, dedica-se à gestão de resíduos tecnológicos por meio de mutirões de coleta, manufatura reversa e destinação adequada. Além disso, oferece capacitação técnica a jovens, fomentando inclusão digital e geração de novas oportunidades profissionais na região amazônica.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Coopbravo
+      </div>
+      <div class="flip-card-back">
+        A Coopbravo atua como cooperativa de agentes ambientais e combina atividades de coleta e triagem de materiais recicláveis com ações de educação socioambiental. Através de oficinas, palestras e mutirões de limpeza, contribui para a capacitação de novos cooperados, promovendo geração de renda, inclusão social e valorização do trabalho dos catadores.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Reciclar pelo Brasil
+      </div>
+      <div class="flip-card-back">
+        O Reciclar pelo Brasil é considerado a maior plataforma de reciclagem inclusiva do país, sendo resultado da articulação com a ANCAT. Sua atuação envolve investimentos e assessoria técnica para cooperativas de catadores, com resultados expressivos que incluem centenas de milhares de toneladas de resíduos reciclados, centenas de cidades beneficiadas e significativa movimentação financeira em vendas de materiais recuperados.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Circular Brain
+      </div>
+      <div class="flip-card-back">
+        A Circular Brain é uma startup brasileira especializada em soluções digitais para a economia circular. Por meio da plataforma CIRCULARE, utiliza tecnologias como blockchain, inteligência artificial e tokenização para garantir a rastreabilidade de resíduos eletrônicos e promover a integração entre fabricantes, recicladores e outros agentes da cadeia produtiva. Em poucos anos de atuação, já processou grande volume de resíduos e recuperou metais preciosos, tornando-se referência em inovação para a sustentabilidade.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Movimento Emaús
+      </div>
+      <div class="flip-card-back">
+        O Movimento Emaús possui presença em diferentes estados do Brasil e atua na coleta, recuperação e comercialização de objetos usados por meio de bazares comunitários. Os recursos arrecadados são destinados a programas sociais, especialmente cursos de profissionalização em áreas como eletrônica, informática e refrigeração, promovendo inclusão social e redução da pobreza.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        CEMPRE
+      </div>
+      <div class="flip-card-back">
+        O CEMPRE – Compromisso Empresarial para Reciclagem, fundado em 1992, é uma associação sem fins lucrativos mantida por empresas privadas e voltada para o estímulo à reciclagem e ao gerenciamento de resíduos. Sua atuação envolve a produção de estudos, seminários e publicações técnicas, além de promover a conscientização da sociedade e apoiar políticas públicas voltadas à sustentabilidade.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Coopervida Ambiental do Brasil
+      </div>
+      <div class="flip-card-back">
+        A Coopervida Ambiental do Brasil, localizada em Paulínia (SP), é uma cooperativa de referência em gestão de resíduos recicláveis. Sua eficiência administrativa e qualidade operacional a destacam como modelo de produtividade, cidadania e geração de renda no setor cooperativista.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Rede Papel Solidário
+      </div>
+      <div class="flip-card-back">
+        A Rede Papel Solidário, criada em 2006 pelo Instituto Papel Solidário, é uma iniciativa que une educação ambiental e apoio a empreendimentos sociais. Seus projetos, como o “Muro Consciente” e o “Papel Semente”, envolvem práticas de reciclagem em escolas e comunidades, promovendo conscientização, sustentabilidade e inovação social.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Coca-Cola Brasil
+      </div>
+      <div class="flip-card-back">
+        Desenvolve ações alinhadas ao programa global “Mundo Sem Resíduos”, cuja meta é recolher e reciclar o equivalente a 100% das embalagens colocadas no mercado até 2030. No país, a empresa é fundadora do CEMPRE e parceira do Reciclar pelo Brasil, apoiando cooperativas de catadores e fortalecendo a coleta seletiva. Também investe em projetos de educação ambiental, incentiva a economia circular e amplia o uso de embalagens retornáveis e de PET reciclado, reduzindo a dependência do plástico virgem e promovendo impactos socioambientais positivos.
+      </div>
     </div>
   </div>
 </div>
 
-    
 
-    
-  
+<h3>COMO SEPARAR O LIXO EM CASA</h3>
+<p>corretamente o lixo é essencial para a reciclagem. O ideal é dividir os resíduos em secos — como papel, vidro, metal e plástico — e orgânicos — restos de alimentos e cascas. É importante lavar embalagens para evitar contaminação, usar recipientes diferentes para cada tipo de material e entregar o lixo nos pontos de coleta seletiva, cooperativas ou programas municipais de reciclagem. Essa prática facilita a reutilização e reduz impactos ambientais.</p>
+
+<h3>RECICLAGEM CRIATIVA (TRANSFORMAR LIXO EM ARTE, MÓVEIS, DECORAÇÃO)</h3>
+<p>A reciclagem criativa transforma materiais descartados em objetos úteis ou artísticos. Garrafas plásticas podem virar vasos decorativos, pneus se transformam em bancos ou balanços, paletes podem ser convertidos em móveis. Essa prática reduz o volume de lixo, estimula a criatividade e o empreendedorismo, além de gerar oportunidades de negócio e conscientizar a população sobre reaproveitamento de materiais.</p>
+
+<h3>BENEFÍCIOS DA RECICLAGEM (IMPACTOS AMBIENTAIS, SOCIAIS E ECONÔMICOS)</h3>
+<div class="beneficios">
+  <div class="topico">
+    <img src="https://i.ibb.co/h1WYvtFF/broto-removebg-preview.png" alt="Impactos Ambientais">
+    <p>
+      Reciclar é fundamental para a preservação do meio ambiente. Ajuda a reduzir a poluição do solo, da água e do ar, prevenindo o acúmulo de resíduos em aterros sanitários e oceanos.
+    </p>
+  </div>
+
+  <div class="topico">
+    <img src="https://i.ibb.co/CswKvyd6/sociedade-removebg-preview.png" alt="Impactos Sociais">
+    <p>
+      No aspecto social, promove inclusão e geração de renda para catadores e comunidades que dependem da reciclagem.
+    </p>
+  </div>
+
+  <div class="topico">
+    <img src="https://i.ibb.co/Y4ypV7Fs/economico-removebg-preview.png" alt="Impactos Econômicos">
+    <p>
+      Economicamente, diminui custos de produção, preserva recursos naturais e contribui para a economia circular, estimulando práticas sustentáveis em indústrias e empresas.
+    </p>
+  </div>
+</div>
 
 
+<div class="reciclagem-container">
+  <div class="texto">
+    <h3>PONTOS DE RECICLAGEM EM OSASCO</h3>
+    <p>Reciclar é uma atitude simples que ajuda a preservar o meio ambiente...</p>
+  </div>
+
+  <!-- Aqui vai aparecer o mapa -->
+  <div id="mapaGoogle"></div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Script do mapa -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = L.map("mapaGoogle").setView([-23.5200, -46.8000], 14);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap contributors",
+    }).addTo(map);
+
+    const pontosReciclagem = [
+      {
+        lat: -23.5056746,
+        lng: -46.7978832,
+        nome: "Praça Pastor José Maria da Silva",
+        endereco: "R. Pastor José Maria da Silva, 33 - Jardim Elvira, Osasco - SP",
+      },
+      {
+        lat: -23.4993286,
+        lng: -46.8152642,
+        nome: "EcoPonto Jardim Elvira",
+        endereco: "Av. João de Andrade, 500 - Jardim Elvira, Osasco - SP",
+      },
+    ];
+
+    pontosReciclagem.forEach((ponto) => {
+      L.marker([ponto.lat, ponto.lng])
+        .addTo(map)
+        .bindPopup(`<b>${ponto.nome}</b><br>${ponto.endereco}`);
+    });
+  });
+</script>
+
+<!-- Script do modo acessível -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const botao = document.getElementById("acessibilidadeToggle");
+
+    const salvo = localStorage.getItem("modoAcessivel") === "true";
+    if (salvo) {
+      document.body.setAttribute("data-acessivel", "true");
+    }
+
+    if (botao) {
+      botao.addEventListener("click", () => {
+        const atual = document.body.getAttribute("data-acessivel") === "true";
+        document.body.setAttribute("data-acessivel", !atual);
+        localStorage.setItem("modoAcessivel", String(!atual));
+      });
+    } else {
+      console.error("Botão de acessibilidade não encontrado!");
+    }
+  });
+</script>
+</body>
   </body>
 </html>
