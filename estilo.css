@@ -1,19 +1,14 @@
-/*cor do padrao do site*/
 :root {
   --bg-color: #ffffff;
   --text-color: #111111;
 }
 
-/*cor do modo acessibildade*/
-body[data-acessivel="true"] {
-  --bg-color: #facfcf; /* Preto suave */
-  --text-color: #2e2e2e; /* Cinza claro */
-}
-/*funçao que altera a cor do botao de acessibilidade*/
-body[data-acessivel="true"] button#acessibilidadeToggle {
-  background-color: #d58000;
-  color: #fff;
-  border: 2px solid #222;
+[data-acessivel="true"] {
+  --bg-color: #F5F5F5; /* Preto suave */
+  --text-color:  #2E2E2E; /* Cinza claro */
+  
+  
+ 
 }
 
 body {
@@ -26,8 +21,8 @@ body {
   overflow-x: hidden; /* Evita rolagem lateral */
 }
 
-a {
-  color: #007bff;
+a{
+  color:#007BFF
 }
 
 /* ESTILO DO BOTAO DE ACESSIBILIDADE*/
@@ -35,7 +30,7 @@ a {
 button#acessibilidadeToggle {
   padding: 10px 15px;
   margin: 20px 0;
-  background-color: #009e73;
+  background-color:  #D55E00 ; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -43,53 +38,50 @@ button#acessibilidadeToggle {
 }
 
 button#acessibilidadeToggle:hover {
-  background-color: #009e73;
+  background-color: #009E73;
 }
 
-/* Mantendo o estilo do seu site para o mapa */
-#mapaGoogle {
-  max-width: 100%;
-  height: 450px; /* altura fixa, essencial para Leaflet */
-  display: block;
-  margin: 0 auto;
-  border: 2px solid #333;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+
+/* Ajuste para o mapa Google */
+.mapaGoogle {
+  max-width: 100%; /* Limita o tamanho ao contêiner */
+  height: auto; /* Ajusta a altura proporcionalmente */
+  display: block; /* Garante que o mapa não cause vazamento */
+  margin: 0 auto; /* Centraliza o mapa */
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE COM CELULARES */
 @media (max-width: 450px) {
-  #mapaGoogle {
-    width: 100%;
-    height: 300px;
+  body {
+    font-size: 19px;
+  }
+
+  
+
+  .mapaGoogle {
+    width: 200%; /* Ajusta o mapa para caber na tela */
+    height: 300; /* Define uma altura fixa */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  #mapaGoogle {
-    width: 100%;
-    height: 380px;
+ 
+
+  .mapaGoogle {
+    width: 100%; /* Ajusta o mapa para caber na tela */
+    height: 380px; /* Define uma altura fixa */
   }
 }
 
-/* Personalizando controles do Leaflet */
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-weight: bold;
-  border: 1px solid #555;
-  border-radius: 5px;
-}
+@media (orientation: landscape) {
+  body {
+    font-size: 16px;
+  }
 
-.leaflet-popup-content {
-  font-family: Arial, sans-serif;
-  color: var(--text-color);
-  font-size: 14px;
-}
+  .menu {
+    display: none;
+  }
 
-/* Popups acessíveis no modo acessível */
-body[data-acessivel="true"] .leaflet-popup-content {
-  font-size: 16px;
-  color: #2e2e2e;
+ 
 }
