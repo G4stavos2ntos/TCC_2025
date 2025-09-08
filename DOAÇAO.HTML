@@ -9,20 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet"> <!-- fonte p -->
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> <!-- fonte H3 -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-     <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 
-    #mapaGoogle {
-      width: 100%;
-      height: 500px; /* altura necessária para aparecer */
-      margin-top: 20px;
-    }
-  </style>
+  
   </head>
 
    
@@ -375,34 +371,16 @@ Esses dados fazem parte da pesquisa "PesquisA DOAÇÃO BRASIL 2024" pelo IDIS.</
     <p><strong>Dica:</strong> Para aproximar ou afastar o mapa, utilize o movimento de pinça com os dedos. Encontre sua residência e localize o ponto de coleta mais próximo, identificado pelos pontos vermelhos. Clique nesse ponto para ver mais informações e, em seguida, pressione "Ver mapa ampliado" para ser direcionado ao Google Maps.</p>
   </div>
   
-  <div id="mapaGoogle"></div>
+  
 
   <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+   <div id="mapaGoogle"></div>
+
+
+  <div id="mapid"></div>
 
   <!-- Inicialização direta do mapa -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const mapaElemento = document.getElementById("mapaGoogle");
-      if (mapaElemento) {
-        const map = L.map("mapaGoogle").setView([-23.5200, -46.8000], 14);
-
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> colaboradores'
-        }).addTo(map);
-
-        // Marcadores de exemplo
-        L.marker([-23.515000, -46.805000])
-          .addTo(map)
-          .bindPopup("📍 Igreja Solidária")
-          .openPopup();
-
-        L.marker([-23.510000, -46.800000])
-          .addTo(map)
-          .bindPopup("📍 Centro de Doações Jardim Elvira");
-      }
-    });
-  </script>
+  
 
 <h3>COMO DOAR ONLINE</h3>
 <P>Para doar online, primeiro escolha a organização ou causa que deseja apoiar, seja uma instituição filantrópica, uma campanha específica ou um projeto individual. Em seguida, acesse a plataforma de doação, que pode estar disponível no site da própria organização ou em plataformas como Vakinha, Para Quem Doar ou Doare. Depois, selecione a forma de doação, optando entre cartão de crédito, Pix, boleto bancário ou transferência bancária. Preencha as informações necessárias, como o valor e os dados do pagamento. Por fim, confira todos os dados e finalize a doação.</P>
@@ -449,28 +427,8 @@ Esses dados fazem parte da pesquisa "PesquisA DOAÇÃO BRASIL 2024" pelo IDIS.</
 </div>
 
 
-    
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const botao = document.getElementById("acessibilidadeToggle");
-    
-        // Ativa o tema salvo
-        const salvo = localStorage.getItem("modoAcessivel") === "true";
-        if (salvo) {
-          document.body.setAttribute("data-acessivel", "true");
-        }
-    
-        // Escuta o clique no botão
-        if (botao) {
-          botao.addEventListener("click", () => {
-            const atual = document.body.getAttribute("data-acessivel") === "true";
-            document.body.setAttribute("data-acessivel", !atual);
-            localStorage.setItem("modoAcessivel", String(!atual));
-          });
-        }
-      });
-    </script>
+   
+<script src="JAVASCRIPT-do-site.js"> </script>
 
   </body>
 </html>
