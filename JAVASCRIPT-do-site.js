@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // =========================
   // MODO ACESSÍVEL
   // =========================
@@ -18,32 +17,125 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const botao = document.getElementById("acessibilidadeToggle");
+
+    // Ativa o tema salvo
+    const salvo = localStorage.getItem("modoAcessivel") === "true";
+    if (salvo) {
+      document.body.setAttribute("data-acessivel", "true");
+    }
+
+    // Escuta o clique no botão
+    if (botao) {
+      botao.addEventListener("click", () => {
+        const atual = document.body.getAttribute("data-acessivel") === "true";
+        document.body.setAttribute("data-acessivel", !atual);
+        localStorage.setItem("modoAcessivel", String(!atual));
+      });
+    }
+  });
+
   // =========================
   // MAPA
   // =========================
-  const mapaElemento = document.getElementById("mapaGoogle");
-  if (mapaElemento) {
-    const map = L.map("mapaGoogle").setView([-23.5200, -46.8000], 14);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    }).addTo(map);
+  // =========================
+  // MAPA
+  // =========================
 
-    const pontosReciclagem = [
-      { lat: -23.5056746, lng: -46.7978832, nome: "Praça Pastor José Maria da Silva", endereco: "R. Pastor José Maria da Silva, 33 - Jardim Elvira, Osasco - SP" },
-      { lat: -23.4993286, lng: -46.8152642, nome: "EcoPonto Jardim Elvira", endereco: "Av. João de Andrade, 500 - Jardim Elvira, Osasco - SP" },
-    ];
+  // Inicializa o mapa vazio em uma posição padrão
+  var map = L.map("mapid").setView([-23.52, -46.8], 13);
 
-    pontosReciclagem.forEach((ponto) => {
+  // Camada base do OpenStreetMap
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  // Variável para armazenar o marcador do usuário
+  var userMarker = null;
+
+  // Arrays de pontos
+  const pontosReciclagem = [
+    {
+      lat: -23.49903,
+      lng: -46.798947,
+      nome: "Praça Pastor José Maria da Silva",
+      endereco:
+        "R. Pastor José Maria da Silva, 33 - Jardim Elvira, Osasco - SP",
+    },
+    {
+      lat: -23.4993286,
+      lng: -46.8152642,
+      nome: "EcoPonto Jardim Elvira",
+      endereco: "Av. João de Andrade, 500 - Jardim Elvira, Osasco - SP",
+    },
+  ];
+
+  const pontosDoacao = [
+    {
+      lat: -23.510123,
+      lng: -46.800456,
+      nome: "ONG Exemplo 1",
+      endereco: "R. Exemplo, 100 - Osasco, SP",
+    },
+    {
+      lat: -23.515789,
+      lng: -46.810123,
+      nome: "ONG Exemplo 2",
+      endereco: "Av. Exemplo, 200 - Osasco, SP",
+    },
+  ];
+
+  // Função para mostrar pontos no mapa
+  function mostrarPontos(pontos) {
+    pontos.forEach((ponto) => {
       L.marker([ponto.lat, ponto.lng])
         .addTo(map)
         .bindPopup(`<b>${ponto.nome}</b><br>${ponto.endereco}`);
     });
-
-    // Se o mapa estiver dentro de um container que pode estar escondido inicialmente
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 200); // pequeno delay para garantir que o container está renderizado
   }
 
+  // Função chamada quando a posição é encontrada
+  function success(pos) {
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+
+    console.log("Localização atual:", lat, lng);
+
+    if (!userMarker) {
+      userMarker = L.marker([lat, lng])
+        .addTo(map)
+        .bindPopup("📍 Você está aqui!")
+        .openPopup();
+
+      map.setView([lat, lng], 15);
+    } else {
+      userMarker.setLatLng([lat, lng]);
+    }
+  }
+
+  // Função chamada se der erro
+  function error(err) {
+    console.warn("Erro ao obter localização:", err);
+  }
+
+  // Ativa o rastreamento em tempo real
+  navigator.geolocation.watchPosition(success, error, {
+    enableHighAccuracy: true,
+    maximumAge: 0,
+    timeout: 5000,
+  });
+
+  // Detecta qual página está aberta e mostra os pontos correspondentes
+  const pagina = window.location.pathname.split("/").pop(); // pega o nome do HTML
+  if (pagina === "RECICLAGEM.html") {
+    mostrarPontos(pontosReciclagem);
+  } else if (pagina === "DOACAO.html") {
+    mostrarPontos(pontosDoacao);
+  }
 });
+// Exemplo: chamar para mostrar pontos
+// mostrarReciclagem();
+// mostrarDoacao();
