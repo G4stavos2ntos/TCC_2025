@@ -8,7 +8,11 @@
 [data-acessivel="true"] {
   --bg-color: #f5f5f5; /* Preto suave */
   --text-color: #2e2e2e; /* Cinza claro */
+
+  
+  
 }
+
 
 body {
   background-color: var(--bg-color);
@@ -29,15 +33,18 @@ a {
 button#acessibilidadeToggle {
   padding: 10px 15px;
   margin: 20px 0;
-  background-color: #d55e00;
+  background-color: #d55e00; /* cor original */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button#acessibilidadeToggle:hover {
-  background-color: #009e73;
+
+/* Botão ativo */
+button#acessibilidadeToggle.ativo {
+  background-color: #009e73; /* cor quando ativado */
 }
 
 /* RESPONSIVIDADE COM CELULARES */
