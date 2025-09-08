@@ -8,21 +8,20 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 
   <!-- CSS necessário para o mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    #mapaGoogle {
-      width: 100%;
-      height: 500px;
-      margin-top: 20px;
-    }
-  </style>
+  
+  
 </head>
   
   
@@ -350,65 +349,13 @@
   </div>
 
   <!-- Aqui vai aparecer o mapa -->
+
   <div id="mapaGoogle"></div>
-</div>
+  <div id="mapid"></div>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- Script do mapa -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const map = L.map("mapaGoogle").setView([-23.5200, -46.8000], 14);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    }).addTo(map);
-
-    const pontosReciclagem = [
-      {
-        lat: -23.5056746,
-        lng: -46.7978832,
-        nome: "Praça Pastor José Maria da Silva",
-        endereco: "R. Pastor José Maria da Silva, 33 - Jardim Elvira, Osasco - SP",
-      },
-      {
-        lat: -23.4993286,
-        lng: -46.8152642,
-        nome: "EcoPonto Jardim Elvira",
-        endereco: "Av. João de Andrade, 500 - Jardim Elvira, Osasco - SP",
-      },
-    ];
-
-    pontosReciclagem.forEach((ponto) => {
-      L.marker([ponto.lat, ponto.lng])
-        .addTo(map)
-        .bindPopup(`<b>${ponto.nome}</b><br>${ponto.endereco}`);
-    });
-  });
-</script>
-
-<!-- Script do modo acessível -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const botao = document.getElementById("acessibilidadeToggle");
-
-    const salvo = localStorage.getItem("modoAcessivel") === "true";
-    if (salvo) {
-      document.body.setAttribute("data-acessivel", "true");
-    }
-
-    if (botao) {
-      botao.addEventListener("click", () => {
-        const atual = document.body.getAttribute("data-acessivel") === "true";
-        document.body.setAttribute("data-acessivel", !atual);
-        localStorage.setItem("modoAcessivel", String(!atual));
-      });
-    } else {
-      console.error("Botão de acessibilidade não encontrado!");
-    }
-  });
-</script>
+<script src="JAVASCRIPT-do-site.js"> </script>
 </body>
   </body>
 </html>
