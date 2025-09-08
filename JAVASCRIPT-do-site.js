@@ -3,42 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // MODO ACESSÍVEL
   // =========================
   const botao = document.getElementById("acessibilidadeToggle");
-  const salvo = localStorage.getItem("modoAcessivel") === "true";
+  const body = document.body;
 
-  if (salvo) {
-    document.body.setAttribute("data-acessivel", "true");
+  // Função para atualizar o estilo do botão
+  function atualizarBotao() {
+    const ativo = body.getAttribute("data-acessivel") === "true";
+    if (ativo) {
+      botao.classList.add("ativo");
+    } else {
+      botao.classList.remove("ativo");
+    }
   }
 
+  // Carrega o estado salvo no localStorage
+  const salvo = localStorage.getItem("modoAcessivel") === "true";
+  if (salvo) {
+    body.setAttribute("data-acessivel", "true");
+  } else {
+    body.setAttribute("data-acessivel", "false");
+  }
+  atualizarBotao();
+
+  // Escuta o clique no botão
   if (botao) {
     botao.addEventListener("click", () => {
-      const atual = document.body.getAttribute("data-acessivel") === "true";
-      document.body.setAttribute("data-acessivel", !atual);
+      const atual = body.getAttribute("data-acessivel") === "true";
+      body.setAttribute("data-acessivel", !atual);
       localStorage.setItem("modoAcessivel", String(!atual));
+      atualizarBotao();
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const botao = document.getElementById("acessibilidadeToggle");
 
-    // Ativa o tema salvo
-    const salvo = localStorage.getItem("modoAcessivel") === "true";
-    if (salvo) {
-      document.body.setAttribute("data-acessivel", "true");
-    }
-
-    // Escuta o clique no botão
-    if (botao) {
-      botao.addEventListener("click", () => {
-        const atual = document.body.getAttribute("data-acessivel") === "true";
-        document.body.setAttribute("data-acessivel", !atual);
-        localStorage.setItem("modoAcessivel", String(!atual));
-      });
-    }
-  });
-
-  // =========================
-  // MAPA
-  // =========================
 
   // =========================
   // MAPA
@@ -136,6 +132,3 @@ document.addEventListener("DOMContentLoaded", function () {
     mostrarPontos(pontosDoacao);
   }
 });
-// Exemplo: chamar para mostrar pontos
-// mostrarReciclagem();
-// mostrarDoacao();
