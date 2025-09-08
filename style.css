@@ -151,7 +151,7 @@ body.pagina1 h3 {
 /* CAIXA DE RECICLAGEM     */
 /* ======================== */
 body.pagina1 .caixa-reciclagem {
-  background-color: #62d2a2;
+  background-color: #62d2a2; /*esse aqui*/
   border-radius: 20px;
   padding: 20px;
   margin: 90px auto 20px auto;
@@ -159,7 +159,7 @@ body.pagina1 .caixa-reciclagem {
   max-width: 1200px;
   color: #000;
   font-family: "Livvic", sans-serif;
-  border: 1px solid #1fab89;
+  border: 1px solid #1fab89; /*esse aqui*/
   position: relative;
 }
 
@@ -214,9 +214,9 @@ input[name="carousel-control"] {
   width: 1050px;
   overflow: hidden;
   margin: auto;
-  border: 2px solid #62d2a2;
+  border: 2px solid #62d2a2;  /*esse aqui*/
   border-radius: 20px;
-  background: #eaf7f3;
+  background: #eaf7f3; /*esse aqui*/
   position: relative;
 }
 
@@ -237,7 +237,7 @@ input[name="carousel-control"] {
   width: 80px;
   height: 80px;
   margin: 0 auto 12px;
-  background-color: #62d2a2;
+  background-color: #62d2a2;  /*esse aqui*/
   border-radius: 10px;
 }
 
@@ -256,7 +256,7 @@ input[name="carousel-control"] {
 
 .info {
   font-size: 0.9em;
-  color: #333;
+  color: #333;  /*esse aqui*/
 }
 
 /* Botões do carrossel */
@@ -272,8 +272,8 @@ input[name="carousel-control"] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(98, 210, 162, 0.8);
-  color: white;
+  background-color: rgba(98, 210, 162, 0.8);  /*esse aqui*/
+  color: white;  /*esse aqui*/
   font-size: 2rem;
   width: 40px;
   height: 40px;
@@ -340,8 +340,8 @@ input[name="carousel-control"] {
 
 .toggle-button {
   display: inline-block;
-  background-color: #62d2a2;
-  color: white;
+  background-color: #62d2a2;  /*esse aqui*/
+  color: white;  /*esse aqui*/
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -351,14 +351,14 @@ input[name="carousel-control"] {
 }
 
 .toggle-button:hover {
-  background-color: #4bbd93;
+  background-color: #4bbd93;  /*esse aqui*/
 }
 
 .info-section {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-  background: #62d2a2;
+  background: #62d2a2;  /*esse aqui*/
   border-radius: 10px;
   padding: 0 20px;
   margin-bottom: 20px;
@@ -444,16 +444,16 @@ input[name="carousel-control"] {
 }
 
 .flip-card-front {
-  background: #62d2a2;
-  color: white;
+  background: #62d2a2;  /*esse aqui*/
+  color: white;  /*esse aqui*/
   font-weight: bold;
   font-size: 25px;
   text-align: center;
 }
 
 .flip-card-back {
-  background: #d2daff;
-  color: #000000;
+  background: #d2daff;  /*esse aqui*/
+  color: #000000;  /*esse aqui*/
   transform: rotateY(180deg);
   font-size: 16px;
   overflow-y: auto;
@@ -479,7 +479,7 @@ body.pagina1 .texto {
 body.pagina1 .mapid iframe {
   width: 450px;
   height: 450px;
-  border: 5px solid #62d2a2;
+  border: 5px solid #62d2a2;  /*esse aqui*/
   border-radius: 50%;
   object-fit: cover;
 }
@@ -535,7 +535,7 @@ body.pagina2 h4 {
   font-weight: bold;
   margin: -30px 0 0 0;
   text-transform: uppercase;
-  color: #000000;
+  color: #000000;  /*esse aqui*/
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -607,7 +607,7 @@ body.pagina2 h4 {
   display: flex;
   gap: 20px;
   align-items: center;
-  background-color: #80b3ff;
+  background-color: #80b3ff;  /*esse aqui*/
   border-radius: 70px;
   width: 98%;
   max-width: 1400px;
@@ -625,35 +625,35 @@ body.pagina2 h4 {
   text-decoration: none;
   padding: 8px 16px;
   border: none;
-  background-color: #1fab89;
-  color: #ffffff;
+  background-color: #1fab89;  /*esse aqui*/
+  color: #ffffff;  /*esse aqui*/
   font-weight: 600;
   font-size: 14px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);  /*esse aqui*/
 }
 
 .pagina2 nav ul.barra-botoes li a:hover,
 .pagina2 nav ul.barra-botoes li button:hover {
-  background-color: #62d2a2;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  background-color: #62d2a2;  /*esse aqui*/
+  color: white;  /*esse aqui*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);  /*esse aqui*/
 }
 
 /* ------------------ CAIXA DE DOAÇÃO ------------------ */
 body.pagina2 .caixa-doaçao {
-  background-color: #80b3ff;
+  background-color: #80b3ff;  /*esse aqui*/
   border-radius: 20px;
   padding: 20px;
   margin: 110px auto 20px auto;
   width: calc(100% - 40px);
   max-width: 1200px;
-  color: #000;
+  color: #000;  /*esse aqui*/
   box-sizing: border-box;
   font-family: "Livvic", sans-serif;
-  border: 4px solid #0096ff;
+  border: 4px solid #0096ff;  /*esse aqui*/
 }
 
 /* ------------------ CARROSSEL DE DOAÇÕES ------------------ */
@@ -677,27 +677,27 @@ body.pagina2 .doacoes-container::-webkit-scrollbar {
   height: 8px;
 }
 
-body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
-  background-color: #0096ff;
-  border-radius: 10px;
-}
+  body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
+    background-color: #0096ff;  /*esse aqui*/
+    border-radius: 10px;
+  }
 
-/* Card de doação */
-body.pagina2 .doacao-card {
-  background-color: #e6f3ff;
-  border-radius: 15px;
-  padding: 25px 20px;
-  flex: 0 0 300px;
-  min-height: 530px;
-  max-height: 580px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+  /* Card de doação */
+  body.pagina2 .doacao-card {
+    background-color: #e6f3ff;  /*esse aqui*/
+    border-radius: 15px;
+    padding: 25px 20px;
+    flex: 0 0 300px;
+    min-height: 530px;
+    max-height: 580px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);  /*esse aqui*/
+    transition: transform 0.3s;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
 body.pagina2 .doacao-card:hover {
   transform: translateY(-5px);
@@ -718,7 +718,7 @@ body.pagina2 .doacao-card h5 {
   font-family: "Livvic", sans-serif;
   font-size: 1.05em;
   font-weight: bold;
-  color: #003366;
+  color: #003366;  /*esse aqui*/
   margin-bottom: 15px;
   text-align: left;
   line-height: 1.3em;
@@ -729,7 +729,7 @@ body.pagina2 .doacao-card h5 {
 body.pagina2 .doacao-card p {
   font-family: "Livvic", sans-serif;
   font-size: 0.9em;
-  color: #333;
+  color: #333;  /*esse aqui*/
   margin: 0;
   text-align: left;
   line-height: 1.4em;
@@ -761,13 +761,13 @@ body.pagina2 .texto {
   font-family: "Livvic", sans-serif;
 }
 
-body.pagina2 .mapaGoogle iframe {
-  width: 450px;
-  height: 450px;
-  border: 5px solid #0096ff;
-  border-radius: 50%;
-  object-fit: cover;
-}
+  body.pagina2 .mapaGoogle iframe {
+    width: 450px;
+    height: 450px;
+    border: 5px solid #0096ff;  /*esse aqui*/
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
 /* ------------------ LINKS DE DOAÇÃO ------------------ */
 .pagina2 .doacoes-links-container {
@@ -784,7 +784,7 @@ body.pagina2 .mapaGoogle iframe {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #d2daff;
+  background-color: #d2daff;  /*esse aqui*/
   border-radius: 16px;
   padding: 10px 0px;
   width: 100%;
@@ -792,8 +792,8 @@ body.pagina2 .mapaGoogle iframe {
 }
 
 .pagina2 .botao-doar {
-  background-color: #80b3ff;
-  color: white;
+  background-color: #80b3ff;  /*esse aqui*/
+  color: white;  /*esse aqui*/
   padding: 30px 50px;
   text-decoration: none;
   font-weight: bold;
@@ -808,24 +808,24 @@ body.pagina2 .mapaGoogle iframe {
   justify-content: center;
 }
 
-.pagina2 .botao-doar:hover {
-  background-color: #42c2ff;
-}
+  .pagina2 .botao-doar:hover {
+    background-color: #42c2ff;  /*esse aqui*/
+  }
 
-.pagina2 .link-item p {
-  margin: 0;
-  font-size: 1.05em;
-  color: #333;
-  font-family: "Livvic", sans-serif;
-  line-height: 1.6;
-  background-color: #eafcfa;
-  padding: 8px 16px;
-  border-radius: 9px;
-  display: block;
-  flex: 1;
-  box-sizing: border-box;
-  width: 100%;
-}
+  .pagina2 .link-item p {
+    margin: 0;
+    font-size: 1.05em;
+    color: #333;  /*esse aqui*/
+    font-family: "Livvic", sans-serif;
+    line-height: 1.6;
+    background-color: #eafcfa;  /*esse aqui*/
+    padding: 8px 16px;
+    border-radius: 9px;
+    display: block;
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+  }
 
 #mapid {
   width: 100%;
