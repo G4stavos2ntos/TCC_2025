@@ -1,39 +1,75 @@
-/* COR DO MODO DE ACESSIBILIDADE*/
+/* ============================
+   VARIÁVEIS DE COR
+============================ */
+
+/* Padrão */
 :root {
-  --bg-color: #ff0000;
+  --pagina1-color: #d2daff;
   --text-color: #111111;
-}
 
-/* COR PADRO DO SITE*/
+  --cor-pagina1:#d7fbe8;
+  --cor-pagina2:#d2daff;
+  --cor-primaria: #62d2a2;
+  --cor-secundaria: #80b3ff;
+  --cor-destaque: #0096ff;
+  --cor-fundo-claro: #eaf7f3;
+  --cor-fundo-card: #e6f3ff;
+  --cor-fundo-alt: #d2daff;
+  --cor-texto: #333333;
+  --cor-texto-destaque: #000000;
+  --cor-botao-hover: #4bbd93;
+  --cor-hover-secundaria: #42c2ff;
+  --cor-branco: #ffffff;
+  --cor-preto: #000000;
+  --cor-sombra: rgba(0, 0, 0, 0.15);
+  --cor-sombra-ativa: rgba(0, 0, 0, 0.25);
+}
+/* Quando acessibilidade está ativa */
 [data-acessivel="true"] {
-  --bg-color: #f5f5f5; /* Preto suave */
-  --text-color: #2e2e2e; /* Cinza claro */
-
-  
-  
+  --bg-color-pagina1: #f5f5f5; /* Fundo claro, quase branco, para alto contraste */
+  --cor-botao-hover: #3a8c70; /* Tom mais escuro e saturado para hover, visível para deuteranopia */
+  --cor-branco: #ffffff; /* Mantido como branco puro */
+  --cor-destaque: #0077b6; /* Azul forte, visível para todos os tipos de daltonismo */
+  --cor-fundo-alt: #b3cde0; /* Tom azulado claro, distinguível de outros fundos */
+  --cor-fundo-card: #d9e4f0; /* Azul claro suave, diferente do fundo principal */
+  --cor-fundo-claro: #e8ecef; /* Cinza claro, neutro e contrastante */
+  --cor-hover-secundaria: #339af0; /* Azul vibrante para hover, visível para tritanopia */
+  --cor-preto: #000000; /* Mantido como preto puro */
+  --cor-primaria: #52b788; /* Verde-azulado, menos problemático para deuteranopia */
+  --cor-secundaria: #6495ed; /* Azul médio, bom para contraste e visibilidade */
+  --cor-sombra: rgba(0, 0, 0, 0.2); /* Sombra suave, ajustada para maior visibilidade */
+  --cor-sombra-ativa: rgba(0, 0, 0, 0.3); /* Sombra mais escura para interação */
+  --cor-texto: #2b2b2b; /* Cinza escuro, próximo ao preto, mas mais suave */
+  --cor-texto-destaque: #000000; /* Preto puro para ênfase */
+  --text-color: #1a1a1a; /* Texto principal escuro, com alto contraste */
 }
 
+/* ============================
+   ESTILO GLOBAL
+============================ */
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove espaçamentos padrão */
-  overflow-x: hidden; /* Evita rolagem lateral */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 a {
   color: #007bff;
 }
 
-/* ESTILO DO BOTAO DE ACESSIBILIDADE*/
+/* ============================
+   BOTÃO DE ACESSIBILIDADE
+============================ */
 
 button#acessibilidadeToggle {
   padding: 10px 15px;
   margin: 20px 0;
-  background-color: #d55e00; /* cor original */
+  background-color: #d55e00;
   color: white;
   border: none;
   border-radius: 5px;
@@ -41,28 +77,148 @@ button#acessibilidadeToggle {
   transition: background-color 0.3s ease;
 }
 
-
-/* Botão ativo */
 button#acessibilidadeToggle.ativo {
-  background-color: #009e73; /* cor quando ativado */
+  background-color: #009e73;
 }
 
-/* RESPONSIVIDADE COM CELULARES */
+/* ============================
+   ELEMENTOS QUE MUDAM DE COR
+============================ */
+
+body.pagina1 .caixa-reciclagem {
+  background-color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+  color: var(--cor-texto-destaque);
+}
+
+.carousel-container {
+  border: 2px solid var(--cor-primaria);
+  background: var(--cor-fundo-claro);
+}
+
+.image-space {
+  background-color: var(--cor-primaria);
+}
+
+.info {
+  color: var(--cor-texto);
+}
+
+.btn {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+.toggle-button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+.toggle-button:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+.info-section {
+  background: var(--cor-primaria);
+}
+
+.flip-card-front {
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+.flip-card-back {
+  background: var(--cor-fundo-alt);
+  color: var(--cor-texto-destaque);
+}
+
+body.pagina1 .mapid iframe {
+  border: 5px solid var(--cor-primaria);
+}
+
+.logo-container.pagina2 .solidario {
+  color: var(--cor-texto-destaque);
+}
+
+.pagina2 nav ul.barra-botoes {
+  background-color: var(--cor-secundaria);
+}
+
+.pagina2 nav ul.barra-botoes li a,
+.pagina2 nav ul.barra-botoes li button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  box-shadow: 0 2px 3px var(--cor-sombra);
+}
+.pagina2 nav ul.barra-botoes li a:hover,
+.pagina2 nav ul.barra-botoes li button:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  box-shadow: 0 4px 8px var(--cor-sombra-ativa);
+}
+
+body.pagina2 .caixa-doaçao {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-destaque);
+  border: 4px solid var(--cor-destaque);
+}
+
+body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
+  background-color: var(--cor-destaque);
+}
+
+body.pagina2 .doacao-card {
+  background-color: var(--cor-fundo-card);
+  box-shadow: 2px 2px 10px var(--cor-sombra);
+}
+
+body.pagina2 .doacao-card h5 {
+  color: var(--cor-preto);
+}
+
+body.pagina2 .doacao-card p {
+  color: var(--cor-texto);
+}
+
+body.pagina2 .mapaGoogle iframe {
+  border: 5px solid var(--cor-destaque);
+}
+
+.pagina2 .link-item {
+  background-color: var(--cor-fundo-alt);
+}
+
+.pagina2 .botao-doar {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+}
+.pagina2 .botao-doar:hover {
+  background-color: var(--cor-hover-secundaria);
+}
+
+.pagina2 .link-item p {
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo-claro);
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+
 @media (max-width: 450px) {
   body {
     font-size: 19px;
   }
 
   .mapaGoogle {
-    width: 200%; /* Ajusta o mapa para caber na tela */
-    height: 300; /* Define uma altura fixa */
+    width: 200%;
+    height: 300;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .mapaGoogle {
-    width: 100%; /* Ajusta o mapa para caber na tela */
-    height: 380px; /* Define uma altura fixa */
+    width: 100%;
+    height: 380px;
   }
 }
 
