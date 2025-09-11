@@ -7,6 +7,9 @@ body.pagina1 {
   padding-left: 20px; /* espaçamento lateral */
   padding-right: 20px;
   box-sizing: border-box;
+  background-color: var(--cor-pagina1);
+  
+
 }
 
 body.pagina1 h3 {
@@ -54,7 +57,7 @@ body.pagina1 h3 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 3px rgb(0, 0, 0);
 }
 
 .pagina1 nav ul.barra-botoes li a:hover,
@@ -488,6 +491,7 @@ body.pagina1 .mapid iframe {
 body.pagina2 {
   font-family: "Livvic", sans-serif;
   font-size: larger;
+  background-color: var(--cor-pagina2)
 }
 
 body.pagina2 h3,
@@ -614,17 +618,20 @@ body.pagina2 h4 {
   text-decoration: none;
   padding: 8px 16px;
   border: none;
+  color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 3px ;  /*esse aqui*/
+  box-shadow: 0 2px 3px rgb(0, 0, 0); /*esse aqui*/
 }
 
 .pagina2 nav ul.barra-botoes li a:hover,
 .pagina2 nav ul.barra-botoes li button:hover {
-  box-shadow: 0 4px 8px   /*esse aqui*/
+  background-color: #6fbda3;
+   box-shadow: 0 2px 3px rgb(0, 0, 0); /*esse aqui*/
+   color: #ffffff;
 }
 
 /* ------------------ CAIXA DE DOAÇÃO ------------------ */
