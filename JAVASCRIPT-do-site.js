@@ -20,19 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
   if (salvo) {
     body.setAttribute("data-acessivel", "true");
   } else {
-    body.setAttribute("data-acessivel", "false");
+    body.removeAttribute("data-acessivel"); // melhor do que forçar "false"
   }
   atualizarBotao();
 
   // Escuta o clique no botão
   if (botao) {
     botao.addEventListener("click", () => {
-      const atual = body.getAttribute("data-acessivel") === "true";
-      body.setAttribute("data-acessivel", !atual);
-      localStorage.setItem("modoAcessivel", String(!atual));
+      const ativo = body.getAttribute("data-acessivel") === "true";
+      if (ativo) {
+        body.removeAttribute("data-acessivel");
+        localStorage.setItem("modoAcessivel", "false");
+      } else {
+        body.setAttribute("data-acessivel", "true");
+        localStorage.setItem("modoAcessivel", "true");
+      }
       atualizarBotao();
     });
   }
+
+
 
 
 
