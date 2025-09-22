@@ -4,10 +4,9 @@
 
 /* Padrão */
 :root {
-  
   --text-color: #111111;
-  --cor-pagina1:#d7fbe8;
-  --cor-pagina2:#d2daff;
+  --cor-pagina1: #d7fbe8;
+  --cor-pagina2: #d2daff;
   --cor-primaria: #62d2a2;
   --cor-secundaria: #80b3ff;
   --cor-destaque: #0096ff;
@@ -37,8 +36,18 @@
   --cor-preto: #000000; /* Mantido como preto puro */
   --cor-primaria: #52b788; /* Verde-azulado, menos problemático para deuteranopia */
   --cor-secundaria: #6495ed; /* Azul médio, bom para contraste e visibilidade */
-  --cor-sombra: rgba(0, 0, 0, 0.2); /* Sombra suave, ajustada para maior visibilidade */
-  --cor-sombra-ativa: rgba(0, 0, 0, 0.3); /* Sombra mais escura para interação */
+  --cor-sombra: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Sombra suave, ajustada para maior visibilidade */
+  --cor-sombra-ativa: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Sombra mais escura para interação */
   --cor-texto: #2b2b2b; /* Cinza escuro, próximo ao preto, mas mais suave */
   --cor-texto-destaque: #000000; /* Preto puro para ênfase */
   --text-color: #1a1a1a; /* Texto principal escuro, com alto contraste */
@@ -76,7 +85,7 @@ button#acessibilidadeToggle {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-  
+
 button#acessibilidadeToggle.ativo {
   background-color: #009e73;
 }
