@@ -8,8 +8,6 @@ body.pagina1 {
   padding-right: 20px;
   box-sizing: border-box;
   background-color: var(--cor-pagina1);
-  
-
 }
 
 body.pagina1 h3 {
@@ -154,7 +152,6 @@ body.pagina1 h3 {
 /* CAIXA DE RECICLAGEM     */
 /* ======================== */
 body.pagina1 .caixa-reciclagem {
-  
   border-radius: 20px;
   padding: 20px;
   margin: 90px auto 20px auto;
@@ -217,7 +214,7 @@ input[name="carousel-control"] {
   width: 1050px;
   overflow: hidden;
   margin: auto;
-  border: 2px solid;  /*esse aqui*/
+  border: 2px solid; /*esse aqui*/
   border-radius: 20px;
   position: relative;
 }
@@ -257,7 +254,6 @@ input[name="carousel-control"] {
 
 .info {
   font-size: 0.9em;
-
 }
 
 /* Botões do carrossel */
@@ -348,7 +344,7 @@ input[name="carousel-control"] {
 }
 
 .toggle-button:hover {
-  background-color:#ffff /*esse aqui*/
+  background-color: #ffff; /*esse aqui*/
 }
 
 .info-section {
@@ -440,15 +436,12 @@ input[name="carousel-control"] {
 }
 
 .flip-card-front {
-  
   font-weight: bold;
   font-size: 25px;
   text-align: center;
 }
 
 .flip-card-back {
- 
-
   transform: rotateY(180deg);
   font-size: 16px;
   overflow-y: auto;
@@ -491,7 +484,7 @@ body.pagina1 .mapid iframe {
 body.pagina2 {
   font-family: "Livvic", sans-serif;
   font-size: larger;
-  background-color: var(--cor-pagina2)
+  background-color: var(--cor-pagina2);
 }
 
 body.pagina2 h3,
@@ -630,8 +623,8 @@ body.pagina2 h4 {
 .pagina2 nav ul.barra-botoes li a:hover,
 .pagina2 nav ul.barra-botoes li button:hover {
   background-color: #6fbda3;
-   box-shadow: 0 2px 3px rgb(0, 0, 0); /*esse aqui*/
-   color: #ffffff;
+  box-shadow: 0 2px 3px rgb(0, 0, 0); /*esse aqui*/
+  color: #ffffff;
 }
 
 /* ------------------ CAIXA DE DOAÇÃO ------------------ */
@@ -643,7 +636,7 @@ body.pagina2 .caixa-doaçao {
   max-width: 1200px;
   box-sizing: border-box;
   font-family: "Livvic", sans-serif;
-  border: 4px solid;  /*esse aqui*/
+  border: 4px solid; /*esse aqui*/
 }
 
 /* ------------------ CARROSSEL DE DOAÇÕES ------------------ */
@@ -667,26 +660,26 @@ body.pagina2 .doacoes-container::-webkit-scrollbar {
   height: 8px;
 }
 
-  body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
-    background-color: #0096ff;  /*esse aqui*/
-    border-radius: 10px;
-  }
+body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
+  background-color: #0096ff; /*esse aqui*/
+  border-radius: 10px;
+}
 
-  /* Card de doação */
-  body.pagina2 .doacao-card {
-    border-radius: 15px;
-    padding: 25px 20px;
-    flex: 0 0 300px;
-    min-height: 530px;
-    max-height: 580px;
-    text-align: center;
-    box-shadow: 2px 2px 10px;  /*esse aqui*/
-    transition: transform 0.3s;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+/* Card de doação */
+body.pagina2 .doacao-card {
+  border-radius: 15px;
+  padding: 25px 20px;
+  flex: 0 0 300px;
+  min-height: 530px;
+  max-height: 580px;
+  text-align: center;
+  box-shadow: 2px 2px 10px; /*esse aqui*/
+  transition: transform 0.3s;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 body.pagina2 .doacao-card:hover {
   transform: translateY(-5px);
@@ -748,13 +741,13 @@ body.pagina2 .texto {
   font-family: "Livvic", sans-serif;
 }
 
-  body.pagina2 .mapaGoogle iframe {
-    width: 450px;
-    height: 450px;
-    border: 5px solid ;  /*esse aqui*/
-    border-radius: 50%;
-    object-fit: cover;
-  }
+body.pagina2 .mapaGoogle iframe {
+  width: 450px;
+  height: 450px;
+  border: 5px solid; /*esse aqui*/
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 /* ------------------ LINKS DE DOAÇÃO ------------------ */
 .pagina2 .doacoes-links-container {
@@ -792,22 +785,22 @@ body.pagina2 .texto {
   justify-content: center;
 }
 
-  .pagina2 .botao-doar:hover {
-    background-color: #42c2ff;  /*esse aqui*/
-  }
+.pagina2 .botao-doar:hover {
+  background-color: #42c2ff; /*esse aqui*/
+}
 
-  .pagina2 .link-item p {
-    margin: 0;
-    font-size: 1.05em;
-    font-family: "Livvic", sans-serif;
-    line-height: 1.6;
-    padding: 8px 16px;
-    border-radius: 9px;
-    display: block;
-    flex: 1;
-    box-sizing: border-box;
-    width: 100%;
-  }
+.pagina2 .link-item p {
+  margin: 0;
+  font-size: 1.05em;
+  font-family: "Livvic", sans-serif;
+  line-height: 1.6;
+  padding: 8px 16px;
+  border-radius: 9px;
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  width: 100%;
+}
 
 #mapid {
   width: 100%;
