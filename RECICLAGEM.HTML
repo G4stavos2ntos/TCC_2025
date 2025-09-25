@@ -19,19 +19,25 @@
 
   <!-- CSS necessário para o mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+
+
+
+  <!-- h3 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
-  
-  
+
   <body class="pagina1">
-
-    <nav>
-
-    <ul class="barra-botoes">
-      <li><a href="DOAÇAO.html">DOAÇÕES</a></li>
-      <li><button id="acessibilidadeToggle">Modo Acessível</button>
-      <a href="#mapid">PONTOS DE COLETA PROXIMOS</a></li>
-    </ul>
-  </nav>
+  <nav>
+<nav>
+  <ul class="barra-botoes">
+    <li><a href="DOACAO.html">DOAÇÕES</a></li>
+    <li><a href="#mapid">PONTOS DE COLETA PRÓXIMOS</a></li>
+    <li class="acessibilidade-li"><button id="acessibilidadeToggle">MODO ACESSÍVEL</button></li>
+  </ul>
+</nav>
 
   <div class="logo-container">
   <img src="https://i.ibb.co/LdJC97Wc/C-pia-de-quadrinho-removebg-preview.png" 
@@ -51,63 +57,101 @@
  <h3>O QUE SÃO RESIDUOS:</h3>
 <p>Define-se resíduo, como todo material que sobra de determinado produto após sua utilização. Pode ser dividido entre resíduos sólidos e resíduos úmidos e/ou orgânicos. Ambos possuem grande potencial para serem reutilizados ou reciclados.</p>
 
-
 <div class="residuos-container">
   <div class="residuo">
-    <h3>O QUE SÃO RESÍDUOS RECICLÁVEIS</h3>
-    <p>O lixo reciclável refere-se a materiais que podem ser processados e transformados em novos produtos. Os resíduos recicláveis incluem materiais como papel, plástico, metal e vidro como Embalagens, Copos, Vidros especiais como tampa de forno micro-ondas, Frascos de remédio vazio, Potes de conserva, Cacos, Garrafas.</p>
+    <img src="https://i.ibb.co/Nd0py7vr/reciclavel-removebg-preview.png" alt="Resíduos Recicláveis">
+    <div class="texto-primeiro">
+      <h3>O QUE SÃO RESÍDUOS RECICLÁVEIS</h3>
+      <p>O lixo reciclável refere-se a materiais que podem ser processados e transformados em novos produtos. Os resíduos recicláveis incluem materiais como papel, plástico, metal e vidro como embalagens, copos, vidros especiais como tampa de forno micro-ondas, frascos de remédio vazio, potes de conserva, cacos, garrafas.</p>
+    </div>
   </div>
-  
-  <div class="residuo">
+<div class="residuo-invertido">
+  <div class="texto-direita">
     <h3>O QUE SÃO RESÍDUOS NÃO RECICLÁVEIS</h3>
     <p>O lixo não reciclável inclui materiais que não podem ser transformados em novos produtos de forma eficiente. São exemplos comuns plásticos complexos, produtos contaminados e resíduos perigosos, lixo hospitalar, restos de alimentos, produtos químicos, e certos tipos de plásticos contaminados, papel carbono, celofane, papel vegetal, papéis encerados ou plastificados, papel higiênico, guardanapos, etiquetas adesivas e fotografias também não são recicláveis.</p>
   </div>
+  <img src="https://i.ibb.co/TMq9879Q/nao-reciclavel-removebg-preview.png" alt="Resíduos Não Recicláveis">
 </div>
 
+<div class="listas-lado-a-lado">
+  <div class="bloco">
+    <h3>RESÍDUOS COMUNS</h3>
+    <p>Os resíduos comuns são aqueles produzidos no dia a dia, tanto em residências quanto em empresas. Eles englobam diversos tipos de materiais que, depois de usados, precisam de um destino adequado. Parte desses resíduos vai para aterros sanitários, recebendo tratamento correto, enquanto outra parte pode ser reciclada, ajudando a reduzir o impacto ambiental. Exemplos incluem:</p>
 
- <h3>RESÍDUOS COMUNS</h3>
-<p>Os resíduos comuns incluem materiais descartados por residências e empresas, que muitas vezes vão para aterros sanitários ou são reciclados. Exemplos incluem:</p>
+    <input type="checkbox" id="toggle-comuns">
+    <label for="toggle-comuns" class="toggle-button">Mostrar Lista de Resíduos Comuns</label>
+    <section class="info-section" id="secao-comuns">
+      <ul>
+        <li>Restos de alimentos e cascas de frutas</li>
+        <li>Folhas, galhos e grama</li>
+        <li>Papéis, como jornais e papelão</li>
+        <li>Plásticos, como garrafas PET e sacolas</li>
+        <li>Latas de alumínio e aço</li>
+        <li>Vidros, como garrafas e potes</li>
+        <li>Copos e talheres descartáveis</li>
+        <li>Frascos de produtos de limpeza</li>
+        <li>Medicamentos vencidos, pilhas e baterias</li>
+        <li>Lâmpadas fluorescentes e fraldas descartáveis</li>
+        <li>Espelhos, cerâmica e porcelana</li>
+        <li>Bitucas de cigarro</li>
+        <li>Esponjas de limpeza</li>
+        <li>Eletroeletrônicos (computadores, celulares, TVs)</li>
+        <li>Entulhos (cimento, tijolos, concreto)</li>
+      </ul>
+    </section>
+  </div>
 
-<input type="checkbox" id="toggle-comuns">
-<label for="toggle-comuns" class="toggle-button">Mostrar Lista de Resíduos Comuns</label>
-<section class="info-section" id="secao-comuns">
-  <ul>
-    <li>Restos de alimentos e cascas de frutas</li>
-    <li>Folhas, galhos e grama</li>
-    <li>Papéis, como jornais e papelão</li>
-    <li>Plásticos, como garrafas PET e sacolas</li>
-    <li>Latas de alumínio e aço</li>
-    <li>Vidros, como garrafas e potes</li>
-    <li>Copos e talheres descartáveis</li>
-    <li>Frascos de produtos de limpeza</li>
-    <li>Medicamentos vencidos, pilhas e baterias</li>
-    <li>Lâmpadas fluorescentes e fraldas descartáveis</li>
-    <li>Espelhos, cerâmica e porcelana</li>
-    <li>Bitucas de cigarro</li>
-    <li>Esponjas de limpeza</li>
-    <li>Eletroeletrônicos (computadores, celulares, TVs)</li>
-    <li>Entulhos (cimento, tijolos, concreto)</li>
-  </ul>
-</section>
+  <div class="bloco">
+    <h3>RESÍDUOS ESPECIAIS</h3>
+    <p>Resíduos especiais, também conhecidos como resíduos perigosos, são aqueles que precisam de um tratamento especial devido à sua composição química ou periculosidade para a saúde e o meio ambiente. Não devem ser descartados como lixo comum ou reciclável. O descarte correto desses resíduos é fundamental para evitar a contaminação e garantir um tratamento adequado.</p>
 
-<h3>RESÍDUOS ESPECIAIS</h3>
-<p>Resíduos especiais, também conhecidos como resíduos perigosos, são aqueles que precisam de um tratamento especial devido à sua composição química ou periculosidade para a saúde e o meio ambiente. Não devem ser descartados como lixo comum ou reciclável. O descarte correto desses resíduos é fundamental para evitar a contaminação e garantir um tratamento adequado.</p>
+    <input type="checkbox" id="toggle-especiais">
+    <label for="toggle-especiais" class="toggle-button">Mostrar Lista de Resíduos Especiais</label>
+    <section class="info-section" id="secao-especiais">
+      <ul>
+        <li>Lâmpadas fluorescentes</li>
+        <li>Pilhas e baterias</li>
+        <li>Medicamentos</li>
+        <li>Óleo de cozinha</li>
+        <li>Eletrônicos</li>
+        <li>Resíduos de serviços de saúde</li>
+        <li>Pneus</li>
+        <li>Rádios</li>
+      </ul>
+    </section>
+  </div>
+</div>
 
-<input type="checkbox" id="toggle-especiais">
-<label for="toggle-especiais" class="toggle-button">Mostrar Lista de Resíduos Especiais</label>
-<section class="info-section" id="secao-especiais">
-  <ul>
-    <li>Lâmpadas fluorescentes</li>
-    <li>Pilhas e baterias</li>
-    <li>Medicamentos</li>
-    <li>Óleo de cozinha</li>
-    <li>Eletrônicos</li>
-    <li>Resíduos de serviços de saúde</li>
-    <li>Pneus</li>
-    <li>Rádios</li>
-  </ul>
-</section>
+<h3>O QUE É LIXO ELETRÔNICO</h3>
+<p>O lixo eletrônico, ou e-lixo, refere-se a dispositivos eletrônicos que atingiram o fim de sua vida útil, como celulares, computadores, televisores, impressoras, pilhas e baterias. Esses equipamentos contêm materiais perigosos, como mercúrio, chumbo, cádmio e outros metais pesados, que, quando descartados inadequadamente, podem contaminar o solo, a água e o ar, gerando impactos significativos à saúde humana e ao meio ambiente.</p>
+<div class="bloco-reciclagem">
+  <div class="conteudo-reciclagem">
+    <strong>PANORAMA DO LIXO ELETRÔNICO NO BRASIL</strong>
+    <p>O Brasil é atualmente o quinto maior gerador de lixo eletrônico do mundo, produzindo milhões de toneladas anuais desse tipo de resíduo. Apesar disso, apenas uma pequena parcela é reciclada de forma correta; estimativas indicam que cerca de 3% do lixo eletrônico é destinado adequadamente para reciclagem. Grande parte é descartada em aterros ou jogada em lixões, aumentando o risco de contaminação e desperdício de recursos valiosos, como metais nobres que podem ser recuperados e reutilizados.</p>
 
+    <strong>LEGISLAÇÃO E LOGÍSTICA REVERSA</strong>
+    <p>Para enfrentar esse problema, a Política Nacional de Resíduos Sólidos (PNRS), Lei nº 12.305/2010, estabelece diretrizes de gerenciamento e destinação adequada de resíduos, incluindo a logística reversa, um mecanismo pelo qual fabricantes e importadores são responsáveis por recolher seus produtos após o uso pelo consumidor e encaminhá-los para reciclagem ou disposição segura. Empresas como a Green Eletron, a Reciclus e a Coca-Cola Brasil, bem como cooperativas de catadores e plataformas como o Reciclar pelo Brasil, implementam programas de coleta e destinação de resíduos eletrônicos, garantindo o reaproveitamento de materiais e a inclusão social de trabalhadores do setor.</p>
+  </div>
+
+  <div class="reciclagem-lua">
+    <img src="https://i.ibb.co/5gWNXrqG/desperdicio-removebg-preview.png" alt="desperdicio-removebg-preview">
+  </div>
+</div>
+
+<div class="bloco-descartar">
+  <div class="descartar-img">
+    <img src="https://i.ibb.co/v6K5v6kZ/lixo-eletronico-removebg-preview.png" alt="lixo-eletronico-removebg-preview">
+  </div>
+  <div class="descartar-texto">
+    <h3>COMO DESCARTAR CORRETAMENTE</h3>
+    <p>
+      O descarte adequado envolve a separação dos eletrônicos, a remoção de dados pessoais e o encaminhamento para pontos de coleta autorizados, conhecidos como Pontos de Entrega Voluntária (PEVs). A ABREE (Associação Brasileira de Reciclagem de Eletroeletrônicos) e o site da Green Eletron oferecem ferramentas para localizar PEVs em todo o país, tornando mais fácil para cidadãos e empresas destinarem corretamente seus equipamentos obsoletos.
+    </p>
+  </div>
+</div>
+
+<h3>BENEFÍCIOS DO DESCARTE CORRETO</h3>
+<p>A implementação de práticas corretas de descarte de lixo eletrônico promove benefícios ambientais, econômicos e sociais: reduz contaminação, recupera materiais valiosos, gera emprego em cooperativas de catadores e cria oportunidades de educação e inclusão digital para comunidades vulneráveis. Portanto, o gerenciamento sustentável de resíduos eletrônicos é uma prioridade tanto para o setor público quanto para a iniciativa privada, sendo fundamental para a construção de sociedades mais responsáveis e ambientalmente conscientes.</p>
 
 <h3>CORES DOS LIXOS E SUAS FUNCIONALIDADE</h3>
 
@@ -177,7 +221,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Ecobraz Emigre
+        ECOBRAZ EMIGRE
       </div>
       <div class="flip-card-back">
         A Ecobraz Emigre, por meio do Projeto Reciclando, atua na coleta e reciclagem de resíduos eletrônicos, promovendo a triagem e o recondicionamento de equipamentos que são transformados em centros tecnológicos voltados para comunidades em situação de vulnerabilidade. Dessa forma, a iniciativa contribui para a inclusão digital, a educação ambiental e a compensação de carbono.
@@ -188,7 +232,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Reciclus
+        RECICLUS
       </div>
       <div class="flip-card-back">
         A Reciclus é responsável pela logística reversa de lâmpadas contendo mercúrio no Brasil, disponibilizando pontos de entrega em todo o país para coleta, transporte e destinação ambientalmente adequada. Além de sua atuação operacional, a entidade mantém o programa Reciclus Educa, que desenvolve ações de educação ambiental e já distribuiu milhares de cartilhas e capacitou professores para a disseminação de práticas sustentáveis em escolas.
@@ -199,7 +243,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Aliança pela Reciclagem
+        ALIANÇA PELA RECICLAGEM
       </div>
       <div class="flip-card-back">
         A Aliança pela Reciclagem é uma plataforma criada em parceria com o setor privado e organizações sociais, com base na Política Nacional de Resíduos Sólidos. Seu trabalho consiste em fortalecer cooperativas de catadores por meio de capacitação técnica e autonomia administrativa, tendo já revertido centenas de milhares de toneladas de resíduos e promovido a integração de centenas de empresas em diferentes estados do país.
@@ -210,7 +254,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Descarte Correto
+        DESCARTE CORRETO
       </div>
       <div class="flip-card-back">
         A Descarte Correto, empresa social sediada em Manaus, dedica-se à gestão de resíduos tecnológicos por meio de mutirões de coleta, manufatura reversa e destinação adequada. Além disso, oferece capacitação técnica a jovens, fomentando inclusão digital e geração de novas oportunidades profissionais na região amazônica.
@@ -221,7 +265,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Coopbravo
+        COOPBRAVO
       </div>
       <div class="flip-card-back">
         A Coopbravo atua como cooperativa de agentes ambientais e combina atividades de coleta e triagem de materiais recicláveis com ações de educação socioambiental. Através de oficinas, palestras e mutirões de limpeza, contribui para a capacitação de novos cooperados, promovendo geração de renda, inclusão social e valorização do trabalho dos catadores.
@@ -232,7 +276,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Reciclar pelo Brasil
+        RECICLAR PELO BRASIL
       </div>
       <div class="flip-card-back">
         O Reciclar pelo Brasil é considerado a maior plataforma de reciclagem inclusiva do país, sendo resultado da articulação com a ANCAT. Sua atuação envolve investimentos e assessoria técnica para cooperativas de catadores, com resultados expressivos que incluem centenas de milhares de toneladas de resíduos reciclados, centenas de cidades beneficiadas e significativa movimentação financeira em vendas de materiais recuperados.
@@ -243,7 +287,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Circular Brain
+        CIRCULAR BRAIN
       </div>
       <div class="flip-card-back">
         A Circular Brain é uma startup brasileira especializada em soluções digitais para a economia circular. Por meio da plataforma CIRCULARE, utiliza tecnologias como blockchain, inteligência artificial e tokenização para garantir a rastreabilidade de resíduos eletrônicos e promover a integração entre fabricantes, recicladores e outros agentes da cadeia produtiva. Em poucos anos de atuação, já processou grande volume de resíduos e recuperou metais preciosos, tornando-se referência em inovação para a sustentabilidade.
@@ -254,7 +298,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Movimento Emaús
+        MOVIMENTO EMAÚS
       </div>
       <div class="flip-card-back">
         O Movimento Emaús possui presença em diferentes estados do Brasil e atua na coleta, recuperação e comercialização de objetos usados por meio de bazares comunitários. Os recursos arrecadados são destinados a programas sociais, especialmente cursos de profissionalização em áreas como eletrônica, informática e refrigeração, promovendo inclusão social e redução da pobreza.
@@ -276,7 +320,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Coopervida Ambiental do Brasil
+       COOPERVIDA AMBIENTAL DO BRASIL
       </div>
       <div class="flip-card-back">
         A Coopervida Ambiental do Brasil, localizada em Paulínia (SP), é uma cooperativa de referência em gestão de resíduos recicláveis. Sua eficiência administrativa e qualidade operacional a destacam como modelo de produtividade, cidadania e geração de renda no setor cooperativista.
@@ -287,7 +331,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Rede Papel Solidário
+         REDE PAPEL SOLIDÁRIO
       </div>
       <div class="flip-card-back">
         A Rede Papel Solidário, criada em 2006 pelo Instituto Papel Solidário, é uma iniciativa que une educação ambiental e apoio a empreendimentos sociais. Seus projetos, como o “Muro Consciente” e o “Papel Semente”, envolvem práticas de reciclagem em escolas e comunidades, promovendo conscientização, sustentabilidade e inovação social.
@@ -298,7 +342,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        Coca-Cola Brasil
+        COCA-COLA BRASIL
       </div>
       <div class="flip-card-back">
         Desenvolve ações alinhadas ao programa global “Mundo Sem Resíduos”, cuja meta é recolher e reciclar o equivalente a 100% das embalagens colocadas no mercado até 2030. No país, a empresa é fundadora do CEMPRE e parceira do Reciclar pelo Brasil, apoiando cooperativas de catadores e fortalecendo a coleta seletiva. Também investe em projetos de educação ambiental, incentiva a economia circular e amplia o uso de embalagens retornáveis e de PET reciclado, reduzindo a dependência do plástico virgem e promovendo impactos socioambientais positivos.
@@ -307,14 +351,13 @@
   </div>
 </div>
 
-
 <h3>COMO SEPARAR O LIXO EM CASA</h3>
 <p>corretamente o lixo é essencial para a reciclagem. O ideal é dividir os resíduos em secos — como papel, vidro, metal e plástico — e orgânicos — restos de alimentos e cascas. É importante lavar embalagens para evitar contaminação, usar recipientes diferentes para cada tipo de material e entregar o lixo nos pontos de coleta seletiva, cooperativas ou programas municipais de reciclagem. Essa prática facilita a reutilização e reduz impactos ambientais.</p>
 
-<h3>RECICLAGEM CRIATIVA (TRANSFORMAR LIXO EM ARTE, MÓVEIS, DECORAÇÃO)</h3>
+<h3>RECICLAGEM CRIATIVA: TRANSFORME LIXO EM ARTE, MÓVEIS E DECORAÇÃO</h3>
 <p>A reciclagem criativa transforma materiais descartados em objetos úteis ou artísticos. Garrafas plásticas podem virar vasos decorativos, pneus se transformam em bancos ou balanços, paletes podem ser convertidos em móveis. Essa prática reduz o volume de lixo, estimula a criatividade e o empreendedorismo, além de gerar oportunidades de negócio e conscientizar a população sobre reaproveitamento de materiais.</p>
 
-<h3>BENEFÍCIOS DA RECICLAGEM (IMPACTOS AMBIENTAIS, SOCIAIS E ECONÔMICOS)</h3>
+<h3>BENEFÍCIOS DA RECICLAGEM: IMPACTOS AMBIENTAIS, SOCIAIS E ECONÔMICOS</h3>
 <div class="beneficios">
   <div class="topico">
     <img src="https://i.ibb.co/h1WYvtFF/broto-removebg-preview.png" alt="Impactos Ambientais">
@@ -338,20 +381,20 @@
   </div>
 </div>
 
-
-<div class="reciclagem-container">
+   <div class="reciclagem-container">
   <div class="texto">
     <h3>PONTOS DE RECICLAGEM EM OSASCO</h3>
-    <p>Reciclar é uma atitude simples que ajuda a preservar o meio ambiente...</p>
+    <p>Reciclar é uma atitude simples que ajuda a preservar o meio ambiente, reduzindo a quantidade de lixo nos aterros e economizando recursos naturais. Separando e destinando corretamente seus resíduos, você contribui para um futuro mais limpo e sustentável.</p>
+    <p>O mapa ao lado mostra automaticamente os pontos de reciclagem disponíveis próximos a você, com base na sua localização. Para permitir que o mapa encontre sua posição, clique no botão de localização quando solicitado.</p>
+    <p>Os pontos de reciclagem estão identificados pelos marcadores vermelhos. Clique em um marcador para ver mais informações sobre o local.</p>
+    <p><strong>Dica:</strong> Para aproximar ou afastar o mapa, use o gesto de pinça com os dedos na tela ou o scroll do mouse. Assim, você consegue localizar facilmente o ponto de reciclagem mais próximo da sua casa.</p>
   </div>
+ 
 
-  <!-- Aqui vai aparecer o mapa -->
-
-  <div id="mapid"></div>
+<div id="mapid"></div>
 
 
 
 <script src="JAVASCRIPT-do-site.js"> </script>
-</body>
   </body>
 </html>
