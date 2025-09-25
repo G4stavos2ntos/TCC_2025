@@ -91,8 +91,10 @@ button#acessibilidadeToggle.ativo {
 }
 
 /* ============================
-   ELEMENTOS QUE MUDAM DE COR
+   ELEMENTOS QUE MUDAM DE COR (PAGINA1)
 ============================ */
+
+
 
 body.pagina1 .caixa-reciclagem {
   background-color: var(--cor-primaria);
@@ -100,7 +102,11 @@ body.pagina1 .caixa-reciclagem {
   color: var(--cor-texto-destaque);
 }
 
-.carousel-container {
+.pagina1.reciclagem-lua{
+  background-color: var(--cor-botao-hover);
+
+}
+.pagina1.carousel-container {
   border: 2px solid var(--cor-primaria);
   background: var(--cor-fundo-claro);
 }
@@ -118,24 +124,24 @@ body.pagina1 .caixa-reciclagem {
   color: var(--cor-branco);
 }
 
-.toggle-button {
+.pagina1.toggle-button {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
 }
-.toggle-button:hover {
+.pagina1.toggle-button:hover {
   background-color: var(--cor-botao-hover);
 }
 
-.info-section {
+.pagina1.info-section {
   background: var(--cor-primaria);
 }
 
-.flip-card-front {
+.pagina1.flip-card-front {
   background: var(--cor-primaria);
   color: var(--cor-branco);
 }
 
-.flip-card-back {
+.pagina1.flip-card-back {
   background: var(--cor-fundo-alt);
   color: var(--cor-texto-destaque);
 }
@@ -148,16 +154,14 @@ body.pagina1 .mapid iframe {
   color: var(--cor-texto-destaque);
 }
 
-.pagina2 nav ul.barra-botoes {
-  background-color: var(--cor-secundaria);
-}
 
-.pagina2 nav ul.barra-botoes li a,
-.pagina2 nav ul.barra-botoes li button {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branco);
-  box-shadow: 0 2px 3px var(--cor-sombra);
-}
+
+
+
+/* ============================
+   ELEMENTOS QUE MUDAM DE COR (PAGINA2)
+============================ */
+
 .pagina2 nav ul.barra-botoes li a:hover,
 .pagina2 nav ul.barra-botoes li button:hover {
   background-color: var(--cor-primaria);
