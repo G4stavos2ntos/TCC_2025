@@ -282,7 +282,7 @@ input[name="carousel-control"] {
   border-radius: 20px;
   background: #eaf7f3;
   position: relative;
-  background: var(--cor-fundo-claro);
+ 
 }
 
 .carousel-track {
@@ -304,7 +304,7 @@ input[name="carousel-control"] {
   margin: 0 auto 12px;
   background-color: #62d2a2;
   border-radius: 10px;
-  background-color: var(--cor-primaria);
+  background: var(--cor-primaria);
 }
 
 .image-space img {
@@ -344,11 +344,12 @@ input[name="carousel-control"] {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  border-radius: 50%;
+  border-radius: 50%; 
   cursor: pointer;
   user-select: none;
   text-align: center;
   transition: background-color 0.3s;
+  background: var(--cor-primaria);
 }
 
 .btn:hover {
@@ -419,10 +420,12 @@ input[name="carousel-control"] {
   font-weight: bold;
   margin: 10px 0;
   transition: background-color 0.3s;
+  background: var(--cor-primaria);
 }
 
 .toggle-button:hover {
   background-color: #4bbd93;
+  background: var(--cor-botao-hover);
 }
 
 /* Seções de informação (listas) */
@@ -433,7 +436,9 @@ input[name="carousel-control"] {
   border-radius: 10px;
   padding: 0 20px;
   margin-bottom: 20px;
+  background: #62d2a2;
   background: var(--cor-primaria);
+  
 }
 
 /* Quando o toggle é clicado */
@@ -853,6 +858,7 @@ body.pagina2 .doacoes-container::-webkit-scrollbar {
 body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
   background-color: #0096FF;
   border-radius: 10px;
+  background: var(--cor-destaque);
 }
 
 /* Card de doação */
@@ -870,6 +876,7 @@ body.pagina2 .doacao-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background: var(--cor-fundo-card);
 }
 
 body.pagina2 .doacao-card:hover {
@@ -984,6 +991,7 @@ body.pagina2 .doacao-card p {
   width: 370px;
   height: 450px;
   background: #E6F3FF;
+  background: var(--cor-fundo-claro);
 
   /* topo e base retos, lado curvo voltado para o texto */
   border-top-left-radius: 250px;
@@ -1096,6 +1104,7 @@ body.pagina2 .doacao-card p {
   padding: 10px 0px;
   width: 100%;
   max-width: 1300px;
+  background: var(--cor-fundo-alt);
 }
 
 .pagina2 .botao-doar {
@@ -1113,6 +1122,7 @@ body.pagina2 .doacao-card p {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--cor-destaque);
 }
 
 .pagina2 .botao-doar:hover {
