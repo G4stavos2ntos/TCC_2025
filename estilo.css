@@ -31,7 +31,7 @@
   --cor-destaque: #0077b6; /* Azul forte, visível para todos os tipos de daltonismo */
   --cor-fundo-alt: #b3cde0; /* Tom azulado claro, distinguível de outros fundos */
   --cor-fundo-card: #d9e4f0; /* Azul claro suave, diferente do fundo principal */
-  --cor-fundo-claro: #e8ecef; /* Cinza claro, neutro e contrastante */
+  --cor-fundo-claro: #edefe8; /* Cinza claro, neutro e contrastante */
   --cor-hover-secundaria: #339af0; /* Azul vibrante para hover, visível para tritanopia */
   --cor-preto: #000000; /* Mantido como preto puro */
   --cor-primaria: #52b788; /* Verde-azulado, menos problemático para deuteranopia */
