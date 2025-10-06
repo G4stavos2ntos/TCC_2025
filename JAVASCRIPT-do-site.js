@@ -5,26 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const botao = document.getElementById("acessibilidadeToggle");
   const body = document.body;
 
-  // Função para atualizar o estilo do botão
   function atualizarBotao() {
     const ativo = body.getAttribute("data-acessivel") === "true";
-    if (ativo) {
-      botao.classList.add("ativo");
-    } else {
-      botao.classList.remove("ativo");
-    }
+    if (ativo) botao.classList.add("ativo");
+    else botao.classList.remove("ativo");
   }
 
-  // Carrega o estado salvo no localStorage
   const salvo = localStorage.getItem("modoAcessivel") === "true";
-  if (salvo) {
-    body.setAttribute("data-acessivel", "true");
-  } else {
-    body.removeAttribute("data-acessivel"); // melhor do que forçar "false"
-  }
+  if (salvo) body.setAttribute("data-acessivel", "true");
+  else body.removeAttribute("data-acessivel");
   atualizarBotao();
 
-  // Escuta o clique no botão
   if (botao) {
     botao.addEventListener("click", () => {
       const ativo = body.getAttribute("data-acessivel") === "true";
@@ -42,21 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   // MAPA
   // =========================
-
-  // Inicializa o mapa vazio em uma posição padrão
   var map = L.map("mapid").setView([-23.52, -46.8], 13);
 
-  // Camada base do OpenStreetMap
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
-  // Variável para armazenar o marcador do usuário
   var userMarker = null;
 
-  // Arrays de pontos
-
+  // =========================
+  // Arrays de pontos fixos
+  // =========================
   const pontosReciclagem = [
     {
       lat: -23.508101,
@@ -65,13 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
       endereco: "Avenida Ônix, nº 783, Jardim Ayrosa, Osasco/SP",
       CEP: "06280-030",
     },
-
     {
       lat: -23.564634,
       lng: -46.794282,
-      nome: " Ecoponto Novo Osasco",
+      nome: "Ecoponto Novo Osasco",
       endereco:
-        " Rua Theodoro de Souza Brandão, nº 1020, Novo Osasco, Osasco/SP",
+        "Rua Theodoro de Souza Brandão, nº 1020, Novo Osasco, Osasco/SP",
       CEP: "06045-150",
     },
     {
@@ -79,14 +66,14 @@ document.addEventListener("DOMContentLoaded", function () {
       lng: -46.784705,
       nome: "Ecoponto Baronesa",
       endereco:
-        " Rua Duke Elington, nº 360, ao lado da Academia de Lutas, Osasco/SP",
+        "Rua Duke Elington, nº 360, ao lado da Academia de Lutas, Osasco/SP",
       CEP: "06268-140",
     },
     {
       lat: -23.540736,
       lng: -46.801626,
       nome: "Ecoponto Vila Pestana",
-      endereco: " Rua José Antônio Augusto, nº 55, Osasco/SP",
+      endereco: "Rua José Antônio Augusto, nº 55, Osasco/SP",
       CEP: "06170-170",
     },
     {
@@ -134,8 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
       lat: -23.50153,
       lng: -46.774911,
       nome: "Bazar Beneficente Mercatudo – Casas André Luiz (Osasco)",
-      endereco: " Avenida Presidente Médice, 1365 – Jardim Mutinga, Osasco/SP",
-      telefones: "(11) 2459-7000 / (11) 2457-7733 / (11) 95427-3700 ",
+      endereco: "Avenida Presidente Médice, 1365 – Jardim Mutinga, Osasco/SP",
+      telefones: "(11) 2459-7000 / (11) 2457-7733 / (11) 95427-3700",
     },
     {
       lat: -23.521151,
@@ -146,71 +133,68 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
+  // =========================
   // Função para mostrar pontos no mapa
-  fetch("db.php")
-    .then((response) => response.json())
-    .then((dados) => {
-      // Exibe no console
-      console.log(dados);
+  // =========================
+  function mostrarPontos(pontos) {
+    pontos.forEach((ponto) => {
+      L.marker([ponto.lat, ponto.lng])
+        .addTo(map)
+        .bindPopup(`<b>${ponto.nome}</b><br>${ponto.endereco || ""}`);
+    });
+  }
 
-      // Adiciona os pontos no mapa
-      dados.forEach((ponto) => {
-        L.marker([ponto.lat, ponto.lng])
-          .addTo(map)
-          .bindPopup(`<b>${ponto.nome}</b><br>${ponto.endereco}`);
-      });
-    })
-    .catch((erro) => console.error("Erro ao carregar dados:", erro));
+  // =========================
+  // Mostrar pontos fixos primeiro
+  // =========================
+  const pagina = window.location.pathname.split("/").pop();
+  if (pagina === "RECICLAGEM.html") mostrarPontos(pontosReciclagem);
+  else if (pagina === "DOACAO.html") mostrarPontos(pontosDoacao);
 
-  // Função chamada quando a posição é encontrada
+  // =========================
+  // Carregar pontos do banco via PHP
+  // =========================
+  let tipo =
+    pagina === "RECICLAGEM.html"
+      ? "reciclagem"
+      : pagina === "DOACAO.html"
+      ? "doacao"
+      : "";
+
+  if (tipo) {
+    fetch(`db.php?tipo=${tipo}`)
+      .then((res) => res.json())
+      .then((dados) => {
+        console.log("✅ Pontos do banco carregados:", dados);
+        mostrarPontos(dados);
+      })
+      .catch((erro) =>
+        console.error("❌ Erro ao carregar pontos do banco:", erro)
+      );
+  }
+
+  // =========================
+  // Geolocalização do usuário
+  // =========================
   function success(pos) {
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
-
-    console.log("Localização atual:", lat, lng);
-
     if (!userMarker) {
       userMarker = L.marker([lat, lng])
         .addTo(map)
         .bindPopup("📍 Você está aqui!")
         .openPopup();
-
       map.setView([lat, lng], 15);
-    } else {
-      userMarker.setLatLng([lat, lng]);
-    }
+    } else userMarker.setLatLng([lat, lng]);
   }
 
-  // Função chamada se der erro
   function error(err) {
     console.warn("Erro ao obter localização:", err);
   }
 
-  // Ativa o rastreamento em tempo real
   navigator.geolocation.watchPosition(success, error, {
     enableHighAccuracy: true,
     maximumAge: 0,
     timeout: 5000,
   });
-
-  // Detecta qual página está aberta e mostra os pontos correspondentes
-  const pagina = window.location.pathname.split("/").pop(); // pega o nome do HTML
-  console.log("Página detectada:", pagina);
-  if (pagina === "RECICLAGEM.html") {
-    mostrarPontos(pontosReciclagem);
-  } else if (pagina === "DOACAO.html") {
-    mostrarPontos(pontosDoacao);
-  }
 });
-
-// =========================
-// LIGAÃO COM PHP
-// =========================
-
-fetch("db.php")
-  .then((response) => response.json())
-  .then((dados) => {
-    console.log(dados); // Exibe os dados no console
-    // Aqui você pode manipular os dados para exibir no seu site
-  })
-  .catch((erro) => console.error("Erro ao carregar dados:", erro));
