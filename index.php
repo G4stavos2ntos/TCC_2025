@@ -1,25 +1,39 @@
 <?php
-include 'db.php'; // conexão $conn
-
 header('Content-Type: application/json; charset=utf-8');
+header('Access-Control-Allow-Origin: *');
 
-$tipo = isset($_GET['tipo']) ? $_GET['tipo'] : '';
+require_once __DIR__ . '/db.php';
 
-if ($tipo === 'reciclagem') {
-    $sql = "SELECT nome, endereco, lat, lng FROM pontos_reciclagem";
-} elseif ($tipo === 'doacao') {
-    $sql = "SELECT nome, endereco, lat, lng FROM pontos_doacao";
-} else {
-    echo json_encode(["erro" => "Tipo de página inválido"]);
-    exit;
-}
-
-$resultado = $conn->query($sql);
-
+$categoria = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 $pontos = [];
-while ($row = $resultado->fetch_assoc()) {
-    $pontos[] = $row;
+
+if ($categoria === 'reciclagem' || $categoria === 'doacao') {
+    $table = ($categoria === 'reciclagem') ? 'pontos_reciclagem' : 'pontos_doacao';
+    $sql = "SELECT id, nome, endereco, cidade, estado, cep, lat, lng, descricao FROM $table ORDER BY nome";
+    $res = $conn->query($sql);
+    if ($res) {
+        while ($row = $res->fetch_assoc()) {
+            $row['lat'] = isset($row['lat']) ? (float)$row['lat'] : null;
+            $row['lng'] = isset($row['lng']) ? (float)$row['lng'] : null;
+            $row['tipo'] = $categoria;
+            $pontos[] = $row;
+        }
+    }
+} else {
+    // Pega todos os pontos se categoria não especificada
+    foreach (['reciclagem', 'doacao'] as $cat) {
+        $table = ($cat === 'reciclagem') ? 'pontos_reciclagem' : 'pontos_doacao';
+        $res = $conn->query("SELECT id, nome, endereco, cidade, estado, cep, lat, lng, descricao FROM $table");
+        if ($res) {
+            while ($row = $res->fetch_assoc()) {
+                $row['lat'] = isset($row['lat']) ? (float)$row['lat'] : null;
+                $row['lng'] = isset($row['lng']) ? (float)$row['lng'] : null;
+                $row['tipo'] = $cat;
+                $pontos[] = $row;
+            }
+        }
+    }
 }
 
 echo json_encode($pontos);
-?>
+$conn->close();
