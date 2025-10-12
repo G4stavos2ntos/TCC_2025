@@ -197,4 +197,9 @@ document.addEventListener("DOMContentLoaded", function () {
     maximumAge: 0,
     timeout: 5000,
   });
+
+  //PHP
+  fetch("api/index.php?categoria=reciclagem")
+    .then((r) => r.json())
+    .then((data) => console.log(data));
 });
